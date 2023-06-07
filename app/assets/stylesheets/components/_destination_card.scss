@@ -17,10 +17,11 @@
 
   .icons{
     position: absolute;
-    // right: 0;
+    right: 86px;
+    top: 152px;
     // margin-bottom: 250px;
     // margin-right: 10px;
-    font-size: 28px;
+    // font-size: 28px;
     color: white;
   }
 }
@@ -44,16 +45,17 @@ h1{
 .fa-share{
   cursor:pointer;
   opacity: 0.8;
+  font-size: 31px;
 }
 
 .fa-share:hover{
   opacity: 1;
 }
 
-.fa-bookmark{
+.destination-bookmark{
   cursor:pointer;
   opacity: 0.8;
 }
-.fa-bookmark:hover{
+.destination-bookmark:hover{
   opacity: 1;
 }

@@ -1,6 +1,12 @@
 .card{
   margin-left: 40px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 40px !important;
+}
+
+.activity-card-container{
+  margin-bottom: 60px;
+  margin-right: 40px;
 }
 
 .activity-title{
@@ -43,15 +49,17 @@
 
 .fa-rotate:hover{
   color: black;
+  font-weight: bold;
 }
 
-.fa-bookmark{
+.card-bookmark{
   font-size: 20px;
   cursor: pointer;
 }
 
-.fa-bookmark:hover{
+.card-bookmark:hover{
   color: black;
+  font-weight: bold;
 }
 
 .activity-title{
@@ -61,4 +69,12 @@
 .price-range{
 /*  margin-left: 100px; */
   font-size: 20px;
+}
+
+
+.tab-content{
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-top: none;
 }
