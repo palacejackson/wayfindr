@@ -1,0 +1,61 @@
+.destination-card {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+/*   justify-content: center; */
+  text-align: start;
+  align-items: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  opacity: 0.8;
+  z-index: 1;
+
+  .icons{
+    position: absolute;
+    right: 86px;
+    top: 152px;
+    // margin-bottom: 250px;
+    // margin-right: 10px;
+    // font-size: 28px;
+    color: white;
+  }
+}
+
+
+
+.destination-card-text{
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+h1{
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+
+
+.fa-share{
+  cursor:pointer;
+  opacity: 0.8;
+  font-size: 31px;
+}
+
+.fa-share:hover{
+  opacity: 1;
+}
+
+.destination-bookmark{
+  cursor:pointer;
+  opacity: 0.8;
+}
+.destination-bookmark:hover{
+  opacity: 1;
+}
