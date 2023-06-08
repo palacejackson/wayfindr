@@ -4,6 +4,7 @@ class Activity < ApplicationRecord
   has_many_attached :photos
 
   validates :location, presence: true
+  validates :activity_type, presence: true
   validates :category, presence: true
   validates :name, presence: true, uniqueness: true
   validates :details, presence: true

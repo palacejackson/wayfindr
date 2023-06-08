@@ -1,33 +1,30 @@
-<div class="modal fade" id="ModalToggle" aria-hidden="true" aria-labelledby="ModalToggleLabel" tabindex="-1">
+<% if @trip.errors.any?  %>
+  <script defer>
+    function showModal() {
+      new bootstrap.Modal('#createTripModal').show();
+    }
+    showModal();
+  </script>
+<% end %>
+<div class="modal fade" id="createTripModal" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="ModalToggleLabel">Create your trip</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <%= render partial: "trips/form" %>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#ModalToggle2" data-bs-toggle="modal">Go to activities</button>
-      </div>
-    </div>
+    <%= render partial: "trips/form" %>
   </div>
 </div>
-<div class="modal fade" id="ModalToggle2" aria-hidden="true" aria-labelledby="ModalToggleLabel2" tabindex="-1">
+<div class="modal fade" id="selectActivitiesModal" aria-hidden="true" aria-labelledby="modalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="ModalToggleLabel2">Check your favorite activities</h1>
+        <h1 class="modal-title fs-5" id="modalToggleLabel2">Check your favorite activities</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <%# render checkboxes form %>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#ModalToggle" data-bs-toggle="">Way to your trip</button>
+        <button class="btn btn-primary" data-bs-target="#modalToggle" data-bs-toggle="">Way to your trip</button>
       </div>
     </div>
   </div>
 </div>
-<button class="btn btn-primary" data-bs-target="#ModalToggle" data-bs-toggle="modal">Show me the way</button>
+<button class="btn btn-primary" data-bs-target="#createTripModal" data-bs-toggle="modal">Show me the way</button>
