@@ -1,5 +1,6 @@
 .footer {
-  background: #F4F4F4;
+  // background: #F4F4F4;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,4 +12,8 @@
 .footer-logo {
   display: flex;
   align-items: center;
+}
+
+.logo{
+  width: 58px;
 }

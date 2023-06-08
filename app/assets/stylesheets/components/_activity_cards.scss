@@ -7,6 +7,7 @@
 .activity-card-container{
   margin-bottom: 60px;
   margin-right: 40px;
+  background: white;
 }
 
 .activity-title{
@@ -28,7 +29,7 @@
   margin-top: 8px;
   margin-right: 8px;
   font-size: 28px;
-  color: black;
+  color: $purple;
   z-index: 2;
 }
 
@@ -38,7 +39,7 @@
   margin-top: 8px;
   margin-right: 8px;
   font-size: 28px;
-  color: black;
+  color: $purple;
   z-index: 2;
 }
 
