@@ -122,26 +122,5 @@ end
 
 # puts "Finished!"
 
-puts 'creating 2 trips...'
-
-User.create(email: "ntm@gmail.com", password: "hello123", password_confirmation: "hello123")
 
 
-
-Trip.create(destination: "Budapest", number_of_guests: 2, start_date: "2023-07-10", end_date: "2023-07-15")
-Trip.create(destination: "Rome", number_of_guests: 4, start_date: "2023-08-05", end_date: "2023-08-10")
-
-puts "creating activities...."
-10.times do
-  Activity.create(
-    location: "Rome",
-    activity_type: Category.all.sample.name,
-    name: Faker::Lorem.words(number: 2).join(' '),
-    details: Faker::Lorem.paragraph,
-    rating: rand(1..5),
-    website_url: Faker::Internet.url,
-    daytime: [true, false].sample
-  )
-end
-
-puts 'finished!'
