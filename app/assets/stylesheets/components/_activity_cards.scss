@@ -12,6 +12,11 @@
 
 .activity-title{
   font-size: 20px;
+  color: $custom-grey;
+}
+
+.card-text{
+  color: $custom-black;
 }
 
 .card-img-top{
@@ -70,6 +75,7 @@
 .price-range{
 /*  margin-left: 100px; */
   font-size: 20px;
+  color: $custom-black;
 }
 
 
