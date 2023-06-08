@@ -3,5 +3,8 @@ class PagesController < ApplicationController
 
   def landing
     @trip = Trip.new
+    @categories = Category.all.map do |category|
+      category.name
+    end
   end
 end
