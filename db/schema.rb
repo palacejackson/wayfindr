@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_05_144619) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_105901) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
     t.string "location"
-    t.string "type"
     t.string "name"
     t.text "details"
     t.integer "rating"
@@ -25,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_144619) do
     t.boolean "daytime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "activity_type"
   end
 
   create_table "trip_activities", force: :cascade do |t|
