@@ -1,3 +1,4 @@
+
 # OpenMapApi/Geocoded to generate coordiantes
 
 # geocode_url = "https://api.opentripmap.com/0.1/en/places/geoname?name=#{city}&apikey=#{opentripmap_api_key}"
@@ -120,3 +121,27 @@ cities.each do |city|
 end
 
 puts "Finished!"
+
+
+puts 'creating 2 trips...'
+
+User.create(email: "ntm@gmail.com", password: "hello123", password_confirmation: "hello123")
+
+Trip.create(destination: "Budapest", number_of_guests: 2, start_date: "2023-07-10", end_date: "2023-07-15")
+Trip.create(destination: "Rome", number_of_guests: 4, start_date: "2023-08-05", end_date: "2023-08-10")
+
+puts "creating activities...."
+5.times do
+  Activity.create(
+    location: Faker::Address.city,
+    activity_type: Faker::Address.community,
+    name: Faker::Lorem.words(number: 2).join(' '),
+    details: Faker::Lorem.paragraph,
+    rating: rand(1..5),
+    image_url: Faker::LoremFlickr.image,
+    website_url: Faker::Internet.url,
+    daytime: [true, false].sample
+  )
+end
+
+puts 'finished!'

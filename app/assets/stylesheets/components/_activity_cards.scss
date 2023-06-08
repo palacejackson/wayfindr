@@ -1,0 +1,80 @@
+.card{
+  margin-left: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 40px !important;
+}
+
+.activity-card-container{
+  margin-bottom: 60px;
+  margin-right: 40px;
+}
+
+.activity-title{
+  font-size: 20px;
+}
+
+.card-img-top{
+  opacity: 0.8;
+/*   z-index: 1; */
+  width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 15vw;
+}
+
+.fa-sun{
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  font-size: 28px;
+  color: black;
+  z-index: 2;
+}
+
+.fa-moon{
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  font-size: 28px;
+  color: black;
+  z-index: 2;
+}
+
+.fa-rotate{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fa-rotate:hover{
+  color: black;
+  font-weight: bold;
+}
+
+.card-bookmark{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card-bookmark:hover{
+  color: black;
+  font-weight: bold;
+}
+
+.activity-title{
+  color: #6B7280;
+}
+
+.price-range{
+/*  margin-left: 100px; */
+  font-size: 20px;
+}
+
+
+.tab-content{
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-top: none;
+}
