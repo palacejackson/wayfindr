@@ -6,8 +6,8 @@ class Trip < ApplicationRecord
   has_many :activities, through: :trip_activities
   validates :destination, presence: true
   validates :number_of_guests, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
-  validates :start_date, presence: true
-  validates :end_date, presence: true
+  # validates :start_date, presence: true
+  # validates :end_date, presence: true
 
   def categories
   end
