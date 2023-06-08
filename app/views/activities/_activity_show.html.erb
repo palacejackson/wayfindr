@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop<%= activity %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -15,7 +15,8 @@
 
 
         <div class="container">
-          <h1 class="activity-name mt-3">ACTIVITY_NAME</h1>
+          <h1 class="activity-name mt-3">ACTIVITY_NAME_ <%= activity %> </h1>
+          <%# <%= @activities.name %>
           <div class="info-card row mt-4">
 
             <div class="col-md-6 mb-4">
