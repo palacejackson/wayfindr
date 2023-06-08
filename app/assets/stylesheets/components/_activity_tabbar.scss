@@ -1,0 +1,52 @@
+/* #nav-home{
+
+} */
+
+#nav-home-tab{
+  color: black;
+  background: white;
+}
+
+.nav-link-tab{
+  width: 200px;
+  font-weight: 700;
+}
+
+.nav-link-tab:not(.active){
+  background-color:rgb(241, 241, 241) !important;
+  font-weight: lighter;
+}
+
+/* #nav-profile{
+
+} */
+
+#nav-profile-tab{
+  color: black;
+  background: white;
+}
+
+/* #nav-contact{
+
+} */
+
+#nav-contact-tab{
+  color: black;
+  background: white;
+}
+
+
+/* #nav-last{
+
+} */
+
+#nav-last-tab{
+  color:black;
+  background: white;
+}
+
+
+
+.tab-whole{
+  background: white;
+}

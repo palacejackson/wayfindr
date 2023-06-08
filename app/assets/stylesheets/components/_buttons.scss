@@ -1,0 +1,19 @@
+.btn-purple{
+  background-color:$purple;
+  color: white;
+}
+
+.btn-purple:hover{
+  border: 2px solid $purple;
+  color: black;
+}
+
+.btn-purple-border{
+  border: 2px solid $purple;
+}
+
+.btn-purple-border:hover{
+  // border: 2px solid $purple;
+  background-color: $purple;
+  color: white;
+}
