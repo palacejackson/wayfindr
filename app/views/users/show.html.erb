@@ -1,2 +1,46 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1 class="mt-2 bg-white p-2" style="text-align: right;"><%= @user.username%>'s profile</h1>
+<h3 class="m-3">Your upcoming trips:</h3>
+<div class="container d-flex flex-row justify-content-between">
+  <div class="card bg-white p-4 m-3 d-flex flex-row">
+    <div class="card bg-white text-white new-trip-card me-5">
+          <div class="card-img-overlay">
+            <h2 class="text-dark">Create a new trip</h2>
+          </div>
+        </div>
+    <% @trips.each do |trip|  %>
+      <% if trip.start_date > Date.today  %>
+        <div class="card bg-light text-white profile-trip-card me-5">
+          <div class="card-img-overlay">
+            <div class="d-flex justify-content-between">
+              <h2 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><%= trip.destination %></h2>
+              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
+            </div>
+            <h5 class="card-text" id="header-dates">D<%= (Date.today - trip.start_date).to_i %></h5>
+          </div>
+        </div>
+        <% end %>
+    <% end %>
+  </div>
+  <div class="card bg-white p-4 m-3">
+    <img id="map-placeholder"src="https://static.vecteezy.com/system/resources/previews/004/296/173/non_2x/gray-world-map-isolated-on-white-background-world-map-flat-earth-template-for-web-site-pattern-anual-report-inphographics-vector.jpg" alt="map">
+    <h2>TO-DO: MAP</h2>
+  </div>
+</div>
+<h3 class="m-3">Your past trips:</h3>
+<div class="container">
+  <div class="card bg-white p-4 m-3 d-flex flex-row">
+      <% @trips.each do |trip|  %>
+        <% if trip.start_date < Date.today  %>
+          <div class="card bg-light text-white profile-trip-card me-5">
+            <div class="card-img-overlay">
+              <div class="d-flex justify-content-between">
+                <h2 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><%= trip.destination %></h2>
+                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
+              </div>
+              <h5 class="card-text" id="header-dates">D<%= (Date.today - trip.start_date).to_i %></h5>
+            </div>
+          </div>
+          <% end %>
+      <% end %>
+    </div>
+</div>

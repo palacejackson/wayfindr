@@ -26,7 +26,7 @@
 }
 
 .activity-details{
-  padding: 56px;
+  padding: 45px;
 }
 
 .rating{
@@ -36,4 +36,17 @@
 
 .web-link{
   text-decoration: none;
+}
+
+.btn-close{
+  display: block;
+  margin: auto;
+  font-size: 15px;
+  border: 4px solid #925CFF;
+  border-radius: 4px;
+  width: 35px;
+}
+
+.btn-close:hover{
+  border: 4px solid #925CFF;
 }
