@@ -13,7 +13,8 @@
 # OpenMapApi/Object Properties
 
 # Activity.new = (location:, type:, name: , details: , rating: , image_url: , website_url: , daytime:)
-
+# budapest paris berlin prague rome
+# cathedrals markets secret+bars walking+tours cheap+eats bars pubs cafes
 require "open-uri"
 require "json"
 
@@ -21,19 +22,19 @@ google_api_key = ENV['GOOGLE_API']
 
 cities =
   %w[
-    london budapest paris berlin prague rome
+    london budapest paris
   ]
 
 categories =
   %w[
-    museums parks sights cathedrals markets secret+bars restaurants cheap+eats bars pubs cafes walking+tours
+    museums parks sights restaurants
   ]
 
 puts "Clearing databsae..."
 Activity.destroy_all
 Category.destroy_all
 
-puts "Populating categories..."
+puts "Populating activity_types..."
 
 categories.each do |category|
   formatted_category = category.gsub(/\+/, " ").titleize
@@ -70,8 +71,8 @@ cities.each do |city|
       phone_number = results.fetch("international_phone_number", "Phone number unavailable")
 
       activity = Activity.new(
-        location: city,
-        category: category,
+        location: city.capitalize,
+        activity_type: category.capitalize,
         name: name,
         details: details,
         rating: rating,
@@ -82,16 +83,14 @@ cities.each do |city|
       )
 
       if category == ("secret+bars" || "restaurants" || "bars" || "pubs")
-        activity.daytime = false
+        activity.daytime == false
       else
-        activity.daytime = true
+        activity.daytime == true
       end
 
       photos = results["photos"]
 
-      puts photos
-
-      unless photos.empty?
+      unless photos && photos.empty?
 
         if photos.count < 5
           length = photos.count
@@ -101,9 +100,7 @@ cities.each do |city|
         end
         photo_id = 0
 
-
         puts "Adding photos..."
-
 
         first_five.each do |photo|
           photo_reference = photo["photo_reference"]
@@ -121,27 +118,3 @@ cities.each do |city|
 end
 
 puts "Finished!"
-
-
-puts 'creating 2 trips...'
-
-User.create(email: "ntm@gmail.com", password: "hello123", password_confirmation: "hello123")
-
-Trip.create(destination: "Budapest", number_of_guests: 2, start_date: "2023-07-10", end_date: "2023-07-15")
-Trip.create(destination: "Rome", number_of_guests: 4, start_date: "2023-08-05", end_date: "2023-08-10")
-
-puts "creating activities...."
-5.times do
-  Activity.create(
-    location: Faker::Address.city,
-    activity_type: Faker::Address.community,
-    name: Faker::Lorem.words(number: 2).join(' '),
-    details: Faker::Lorem.paragraph,
-    rating: rand(1..5),
-    image_url: Faker::LoremFlickr.image,
-    website_url: Faker::Internet.url,
-    daytime: [true, false].sample
-  )
-end
-
-puts 'finished!'

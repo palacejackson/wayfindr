@@ -5,7 +5,6 @@ class Activity < ApplicationRecord
 
   validates :location, presence: true
   validates :activity_type, presence: true
-  validates :category, presence: true
   validates :name, presence: true
   validates :details, presence: true
   validates :rating, numericality: { only_float: true, in: (0..10) }
