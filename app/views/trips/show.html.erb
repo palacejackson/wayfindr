@@ -1,4 +1,30 @@
-<h1>Trips#show</h1>
-<p>Find me in app/views/trips/show.html.erb</p>
 
-<%# <%= render 'trips/activity_cards'%>
+<%# <h1>Trip #index</h1> %>
+
+<div class="container">
+  <%= render 'trips/destination_card'%>
+
+  <nav>
+    <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
+    <button class="nav-link active nav-link-tab" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Day 1</button>
+    <% (@trip.num_days - 1).times do |i| %>
+      <button class="nav-link nav-link-tab" id="nav-<%= i + 2 %>-tab" data-bs-toggle="tab" data-bs-target="#nav-<%= i + 2 %>" type="button" role="tab" aria-controls="nav-<%= i + 2 %>" aria-selected="false">Day <%= i + 2 %> </button>
+      <% end %>
+    </div>
+  </nav>
+
+
+  <div class="tab-content tab-whole" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <%= render 'trips/activity_cards', activities: @trip_activities.first  %>
+    </div>
+
+    <% (@trip.num_days - 1).times do |i| %>
+      <div class="tab-pane fade show" id="nav-<%= i + 2 %>" role="tabpanel" aria-labelledby="nav-<%= i + 2 %>-tab">
+        <%= render 'trips/activity_cards', activities: @trip_activities[i + 1] %>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>

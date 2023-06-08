@@ -33,6 +33,7 @@
 #   ]
 
 # puts "Clearing databsae..."
+# Trip.destroy_all
 # Activity.destroy_all
 # Category.destroy_all
 

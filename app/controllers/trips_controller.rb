@@ -1,7 +1,18 @@
 class TripsController < ApplicationController
   def show
-    @trips = Trip.find(params[:id])
-
+    @trip = Trip.find(params[:id])
+    @trip_activities = []
+    @trip.num_days.times do
+      activities = []
+      3.times do
+        activity = @trip.activities.sample
+        while activities.any? { |act| act.activity_type == activity.activity_type || @trip_activities.flatten.include?(activity)}
+          activity = @trip.activities.sample
+        end
+        activities << activity
+      end
+      @trip_activities << activities
+    end
   end
 
   def new
