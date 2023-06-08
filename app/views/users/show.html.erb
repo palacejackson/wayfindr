@@ -2,6 +2,11 @@
 <h3 class="m-3">Your upcoming trips:</h3>
 <div class="container d-flex flex-row justify-content-between">
   <div class="card bg-white p-4 m-3 d-flex flex-row">
+    <div class="card bg-white text-white new-trip-card me-5">
+          <div class="card-img-overlay">
+            <h2 class="text-dark">Create a new trip</h2>
+          </div>
+        </div>
     <% @trips.each do |trip|  %>
       <% if trip.start_date > Date.today  %>
         <div class="card bg-light text-white profile-trip-card me-5">
