@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @trips = current_user
+    @user = current_user
+    @trips = current_user.trips.all
   end
 end
