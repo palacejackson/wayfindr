@@ -20,9 +20,7 @@ google_api_key = ENV['GOOGLE_API']
 
 cities =
   %w[
-    london budapest paris berlin prague amsterdam rome copenhagen barcelona stockholm lisbon
-    brussels istanbul athens dublin munich edinburgh milan oslo warsaw helsinki florence amsterdam
-    prague venice madrid rome
+    london budapest paris berlin prague rome
   ]
 
 categories =
@@ -63,10 +61,10 @@ cities.each do |city|
       results = JSON.parse(serialized_data)["result"]
 
       name = results["name"]
-      address = results["formatted_address"]
-      details = results.dig("editorial_summary", "overview") || "No details avilable, please visit their website"
-      opening_hours = results.dig("opening_hours", "weekday_text") || "No opening hours available"
-      rating = results["rating"]
+      address = results.fetch("formatted_address", "No address available, please check their website")
+      details = results.dig("editorial_summary", "overview") || "No details available, please visit their website"
+      opening_hours = results.dig("opening_hours", "weekday_text") || "Opening hours unavailable, please visit their website"
+      rating = results.fetch("rating", 0)
       website = results.fetch("website", "Website unavailable")
       phone_number = results.fetch("international_phone_number", "Phone number unavailable")
 
@@ -89,20 +87,33 @@ cities.each do |city|
       end
 
       photos = results["photos"]
-      first_five = photos[0..4]
-      photo_id = 0
 
-      puts "Adding photos..."
+      puts photos
 
-      first_five.each do |photo|
-        photo_reference = photo["photo_reference"]
-        photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=#{photo_reference}&key=#{google_api_key}"
+      unless photos.empty?
+
+        if photos.count < 5
+          length = photos.count
+          first_five = photos[0...length]
+        else
+          first_five = photos[0..4]
+        end
+        photo_id = 0
+
+
+        puts "Adding photos..."
+
+
+        first_five.each do |photo|
+          photo_reference = photo["photo_reference"]
+          photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=#{photo_reference}&key=#{google_api_key}"
           begin file = URI.open(photo_url)
             activity.photos.attach(io: file, filename: "#{results[name]}#{photo_id += 1}", content_type: "image/jpg")
           rescue OpenURI::HTTPError
+          end
+          puts "attached? #{activity.photos.attached?}"
         end
       end
-
       activity.save!
     end
   end
