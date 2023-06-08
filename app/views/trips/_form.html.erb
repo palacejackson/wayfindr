@@ -15,7 +15,7 @@
     <%= f.input :end_date,
               as: :string,
               input_html: {data: {controller: "datepicker"}} %>
-    <%= f.association :activities, as: :check_boxes, collection: Activity.all.pluck(:activity_type, :id) %>
+    <%= f.input :categories, as: :check_boxes, collection: @categories, include_hidden: false %>
       </div>
       <div class="modal-footer">
     <%= f.submit "Go to activities", class: "btn btn-primary m-3" %>
