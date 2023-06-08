@@ -4,16 +4,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 150px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   margin-top: 200px;
 }
 .footer-logo {
+  // display: flex;
+  // align-items: center;
+  margin: 0 auto;
+  display: block;
+  margin-right: 328px;
+}
+
+.logo{
+  width: 97px;
+ }
+
+.footer-links {
   display: flex;
   align-items: center;
 }
 
-.logo{
-  width: 58px;
+.footer-links a {
+  color: $purple;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 35px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
 }
