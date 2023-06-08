@@ -1,20 +1,20 @@
 
-<h1>Trip #index</h1>
+<%# <h1>Trip #index</h1> %>
 
 <div class="container">
   <%= render 'trips/destination_card'%>
 
   <nav>
     <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Day 1</button>
-      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Day 2</button>
-      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Day 3</button>
-      <button class="nav-link" id="nav-last-tab" data-bs-toggle="tab" data-bs-target="#nav-last" type="button" role="tab" aria-controls="nav-last" aria-selected="false">Day 4</button>
+      <button class="nav-link active nav-link-tab" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Day 1</button>
+      <button class="nav-link nav-link-tab" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Day 2</button>
+      <button class="nav-link nav-link-tab" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Day 3</button>
+      <button class="nav-link nav-link-tab" id="nav-last-tab" data-bs-toggle="tab" data-bs-target="#nav-last" type="button" role="tab" aria-controls="nav-last" aria-selected="false">Day 4</button>
     </div>
   </nav>
 
 
-  <div class="tab-content" id="nav-tabContent">
+  <div class="tab-content tab-whole" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <%= render 'trips/activity_cards', activities: 1 %>
     </div>
