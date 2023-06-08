@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop<%= activity %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop<%= activity.id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -15,14 +15,14 @@
 
 
         <div class="container">
-          <h1 class="activity-name mt-3">ACTIVITY_NAME_ <%= activity %> </h1>
+          <h1 class="activity-name mt-3"> <%= activity.name %> </h1>
           <%# <%= @activities.name %>
           <div class="info-card row mt-4">
 
             <div class="col-md-6 mb-4">
               <h3 class="mt-3"><i class="fa-solid fa-circle-info me-2"></i>About</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia distinctio quasi est quisquam cupiditate veniam amet ipsum placeat saepe voluptatum perspiciatis nisi doloribus autem error maxime commodi illo, ratione neque!</p>
-              <a class="btn btn-purple-border rounded" href="https://www.thecolosseum.org/visit/" target=_blank>Visit the website</a>
+              <p><%= activity.details %></p>
+              <a class="btn btn-purple-border rounded" href="<%= activity.website_url %>" target=_blank>Visit the website</a>
             </div>
 
             <div class="col-md-6 mb-4 activity-details">
