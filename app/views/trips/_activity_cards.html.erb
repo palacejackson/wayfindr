@@ -1,73 +1,32 @@
 <%# Currently rendered in trips/index.html.erb %>
 
 <div class="activity-card-container d-flex justify-content-evenly">
-  <div class="card mt-4" style="width: 18rem;">
-      <i class="fa-solid fa-sun d-flex justify-content-end"></i>
-    <img src="https://images.unsplash.com/photo-1614354987493-a010f414d0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-    <div class="card-body">
-      <div class="header-container d-flex justify-content-between">
-        <div class="activity-title">Musuem</div>
-        <div class="price-range">£-££</div>
-      </div>
-      <p class="card-text mb-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.Totam rem aperiam, eaque.</p>
-      <div class="features d-flex justify-content-end">
-        <i class="fa-solid fa-rotate me-2"></i>
-        <i class="fa-regular fa-bookmark card-bookmark"></i>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="card mt-4" style="width: 18rem;">
-      <i class="fa-solid fa-sun d-flex justify-content-end"></i>
-    <img src="https://images.unsplash.com/photo-1669048651322-42714878112a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80" class="card-img-top" alt="...">
-    <div class="card-body">
-      <div class="header-container d-flex justify-content-between">
-        <div class="activity-title">Theatre</div>
-        <div class="price-range">£-££</div>
-      </div>
-      <p class="card-text mb-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.Totam rem aperiam, eaque.</p>
-      <div class="features d-flex justify-content-end">
-        <i class="fa-solid fa-rotate me-2"></i>
-        <i class="fa-regular fa-bookmark card-bookmark"></i>
+  <% 4.times do |int| %>
+    <% num = activities + int %>
+    <div class="card mt-4" style="width: 18rem;">
+        <i class="fa-solid fa-sun d-flex justify-content-end"></i>
+      <img src="https://images.unsplash.com/photo-1614354987493-a010f414d0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+      <div class="card-body">
+        <div class="header-container d-flex justify-content-between">
+          <div class="activity-title">Musuem <%= num %> </div>
+          <div class="price-range">£-££</div>
+        </div>
+        <p class="card-text mb-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.Totam rem aperiam, eaque.</p>
+        <div class="d-flex justify-content-start">
+          <%# MODEL BUTTON HERE %>
+          <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%= num %>">
+            click me
+          </button>
+          <%= render 'activities/activity_show', activity: num %>
+        </div>
+        <%# MODEL ENDS ABOVE %>
+        <div class="features d-flex justify-content-end">
+          <i class="fa-solid fa-rotate me-2"></i>
+          <i class="fa-regular fa-bookmark card-bookmark"></i>
+        </div>
       </div>
     </div>
-  </div>
-
-
-  <div class="card mt-4" style="width: 18rem;">
-      <i class="fa-solid fa-moon justify-content-end"></i>
-    <img src="https://images.unsplash.com/photo-1530907878111-b5e0aa55ae07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1087&q=80" class="card-img-top" alt="...">
-    <div class="card-body">
-      <div class="header-container d-flex justify-content-between">
-        <div class="activity-title">Restaurant</div>
-        <div class="price-range">£-££</div>
-      </div>
-      <p class="card-text mb-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.Totam rem aperiam, eaque.</p>
-      <div class="features d-flex justify-content-end">
-        <i class="fa-solid fa-rotate me-2"></i>
-        <i class="fa-regular fa-bookmark card-bookmark"></i>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="card mt-4" style="width: 18rem;">
-      <i class="fa-solid fa-moon justify-content-end"></i>
-    <img src="https://images.unsplash.com/photo-1575444758702-4a6b9222336e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-    <div class="card-body">
-      <div class="header-container d-flex justify-content-between">
-        <div class="activity-title">Bar</div>
-        <div class="price-range">£-££</div>
-      </div>
-      <p class="card-text mb-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.Totam rem aperiam, eaque.</p>
-      <div class="features d-flex justify-content-end">
-        <i class="fa-solid fa-rotate me-2"></i>
-        <i class="fa-regular fa-bookmark card-bookmark"></i>
-      </div>
-    </div>
-  </div>
-
+  <% end %>
 
 
 </div>

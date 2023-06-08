@@ -16,16 +16,20 @@
 
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    <div></div><%= render 'trips/activity_cards'%></div>
+      <%= render 'trips/activity_cards', activities: 1 %>
+    </div>
 
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <div></div><%= render 'trips/activity_cards'%></div>
+      <%= render 'trips/activity_cards', activities: 5 %>
+    </div>
 
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-    <div></div><%= render 'trips/activity_cards'%></div>
+      <%= render 'trips/activity_cards', activities: 9 %>
+    </div>
 
     <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
-    <div></div><%= render 'trips/activity_cards'%></div>
+      <%= render 'trips/activity_cards', activities: 13 %>
+    </div>
   </div>
 
 </div>
