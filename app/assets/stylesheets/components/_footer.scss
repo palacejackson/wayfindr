@@ -4,21 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 150px;
+  height: 120px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   margin-top: 200px;
 }
 .footer-logo {
   // display: flex;
-  // align-items: center;
-  margin: 0 auto;
-  display: block;
-  margin-right: 328px;
+  align-self: center !important;
 }
 
 .logo{
-  width: 97px;
+  width: 80px;
  }
 
 .footer-links {
