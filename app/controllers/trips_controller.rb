@@ -32,9 +32,15 @@ class TripsController < ApplicationController
           @trip.activities << activities
         end
 
-    if @trip.save
+    if categories.size >= 4
+      @trip.save
       redirect_to trip_path(@trip)
     else
+      @trip.errors.add(:categories, "You must choose at least 4 categories")
+      @categories = Category.all.map do |category|
+        category.name
+      end
+      # render :template => "trips/_form", status: :unprocessable_entity
       render 'pages/landing', status: :unprocessable_entity
     end
   end
