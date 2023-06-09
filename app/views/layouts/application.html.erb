@@ -12,15 +12,13 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
   </head>
 
-  <body class>
+  <body data-controller="navbar">
   <%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
 
     <%= yield %>
 
-    <% unless action_name == "show" %>
-      <%= render "shared/footer" %>
-    <% end %>
+  <%= render "shared/footer" unless @skip_footer %>
 
   </body>
 </html>

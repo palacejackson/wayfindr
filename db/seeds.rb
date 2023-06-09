@@ -1,21 +1,21 @@
 
 # OpenMapApi/Geocoded to generate coordiantes
 
-geocode_url = "https://api.opentripmap.com/0.1/en/places/geoname?name=#{city}&apikey=#{opentripmap_api_key}"
-serialized_data = URI.parse(geocode_url).open.read
-result = JSON.parse(serialized_data)
+# geocode_url = "https://api.opentripmap.com/0.1/en/places/geoname?name=#{city}&apikey=#{opentripmap_api_key}"
+# serialized_data = URI.parse(geocode_url).open.read
+# result = JSON.parse(serialized_data)
 
-latitude = result["lat"]
-longitude = result["lon"]
+# latitude = result["lat"]
+# longitude = result["lon"]
 
-OpenMapApi/Raduius to IDs for each activity
-Retrieve ID
-OpenMapApi/Object Properties
+# OpenMapApi/Raduius to IDs for each activity
+# Retrieve ID
+# OpenMapApi/Object Properties
 
-Activity.new = (location:, type:, name: , details: , rating: , image_url: , website_url: , daytime:)
+# Activity.new = (location:, type:, name: , details: , rating: , image_url: , website_url: , daytime:)
 
-budapest paris berlin prague rome
-cathedrals markets secret+bars walking+tours cheap+eats bars pubs cafes
+# budapest paris berlin prague rome
+# cathedrals markets secret+bars walking+tours cheap+eats bars pubs cafes
 
 require "open-uri"
 require "json"

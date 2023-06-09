@@ -6,5 +6,7 @@ class PagesController < ApplicationController
     @categories = Category.all.map do |category|
       category.name
     end
+
+    @skip_footer = true
   end
 end
