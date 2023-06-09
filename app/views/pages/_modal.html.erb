@@ -32,7 +32,7 @@
 <% if current_user %>
   <form id="landing-form" name="landing-form">
     <input type="text" name="landing-form" palceholder="Where would you like to go?">
-    <button class="btn btn-purple" data-bs-target="#createTripModal" data-bs-toggle="modal">Show me the way</button>
+    <button class="btn btn-purple-landing" data-bs-target="#createTripModal" data-bs-toggle="modal">Show me the way</button>
   </form>
 <% else %>
   <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-primary' %>
