@@ -9,6 +9,9 @@ class Trip < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
 
+  geocoded_by :destination
+  after_validation :geocode, if: :will_save_change_to_destination?
+
   def categories
   end
 
