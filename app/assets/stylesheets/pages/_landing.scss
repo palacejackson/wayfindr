@@ -1,0 +1,47 @@
+// Specific CSS for your home-page
+body {
+  margin: 0;
+  padding: 0;
+  background: $light-gray;
+
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("paris.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main .landing-info {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+
+  #head{
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 150px;
+    font-weight: 500;
+    color: $light-gray
+  }
+
+  #body{
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 40 px;
+    font-weight: 500;
+    color: $light-gray
+  }
+
+}

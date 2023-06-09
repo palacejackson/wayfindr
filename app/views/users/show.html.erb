@@ -2,51 +2,12 @@
 <div style="width: 50vm;">
   <h3 class="m-3">Your upcoming trips:</h3>
 </div>
+
 <div class="container d-flex flex-row justify-content-between">
-  <div class="card bg-white p-4 m-3 d-flex flex-row">
-    <% @trips.each do |trip|  %>
-      <% if trip.start_date > Date.today  %>
-        <div class="card bg-light text-white profile-trip-card me-5"
-          data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="travel dates"
-          data-bs-content="<%= trip.start_date.to_fs(:long_ordinal) %> to <%= trip.end_date.to_fs(:long_ordinal) %>"
-          data-animation="">
-          <div class="card-img-overlay">
-            <div class="d-flex justify-content-between">
-              <h2 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top" id="trip-header"><%= trip.destination %></h2>
-              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-            </div>
-            <h5 class="card-text" id="header-dates" style="color: white;">D<%= (Date.today - trip.start_date).to_i %></h5>
-          </div>
-        </div>
-        <% end %>
-    <% end %>
-    <div class="card bg-white text-white new-trip-card me-5">
-          <div class="card-img-overlay" style="text-align: center;">
-            <h2 id="new-trip-header">Create a new trip</h2>
-            <i class="fa-solid fa-plus" style="color: #925CFF; font-size: 36px;"></i>
-          </div>
-      </div>
+    <%= render "trips", locals: {trips: @trips} %>
+    <%= render "new_trip" %>
   </div>
-  <div class="card bg-white p-4 m-3" style="overflow: hidden;">
-    <img id="map-placeholder"src="https://static.vecteezy.com/system/resources/previews/004/296/173/non_2x/gray-world-map-isolated-on-white-background-world-map-flat-earth-template-for-web-site-pattern-anual-report-inphographics-vector.jpg" alt="map">
-    <h2>TO-DO: MAP</h2>
-  </div>
+  <%= render "map" %>
 </div>
-<h3 class="m-3">Your past trips:</h3>
-<div class="container">
-  <div class="card bg-white p-4 m-3 d-flex flex-row">
-      <% @trips.each do |trip|  %>
-        <% if trip.start_date < Date.today  %>
-          <div class="card bg-light text-white profile-trip-card me-5">
-            <div class="card-img-overlay">
-              <div class="d-flex justify-content-between">
-                <h2 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><%= trip.destination %></h2>
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              </div>
-              <h5 class="card-text" id="header-dates">D<%= (Date.today - trip.start_date).to_i %></h5>
-            </div>
-          </div>
-          <% end %>
-      <% end %>
-    </div>
-</div>
+
+<%= render "past_trips", locals: {trips: @trips} %>
