@@ -74,6 +74,9 @@
 
 .price-range{
 /*  margin-left: 100px; */
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
   font-size: 20px;
   color: $custom-black;
 }

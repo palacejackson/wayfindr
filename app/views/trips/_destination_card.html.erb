@@ -1,15 +1,26 @@
-<div class="destination-card-outer mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1533681852052-dba7a3e4ef81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80)">
-  <div id="desination-card-inner">
-    <div class="icons">
-      <i class="fa-solid fa-share align-self-right me-2"></i>
-      <i class="fa-solid fa-bookmark align-self-right destination-bookmark"></i>
-    </div>
-    <div class="destination-card-text">
-      Your trip to
-      <h1>INSERT_DESTINATION</h1>
-    </div>
-  </div>
-</div>
+<% case @trip.destination %>
+<% when "London" %>
+  <div class="destination-card-outer mt-4"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(https://media.istockphoto.com/id/1265900812/photo/aerial-view-of-london-and-the-tower-bridge.jpg?s=170667a&w=0&k=20&c=D1scasnEeMVME3qxfULPEhI92HfpRANoGduki12QnBw=)">
+<% when "Paris" %>
+  <div class="destination-card-outer mt-4"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1120&q=80)">
+<% when "Budapest" %>
+  <div class="destination-card-outer mt-4"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(https://images.unsplash.com/photo-1507622560124-621e26755fb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)">
+<% end %>
 
 
-<%# <%=@trip.destination%>
+      <div id="desination-card-inner">
+        <div class="icons">
+          <i class="fa-solid fa-share align-self-right me-2"></i>
+          <i class="fa-solid fa-bookmark align-self-right destination-bookmark"></i>
+        </div>
+        <div class="destination-card-text">
+          Your trip to
+          <h1><%= @trip.destination %></h1>
+        </div>
+      </div>
+    </div>
+
+<%# MAYBE COUNTDOWN TIMER HERE %>

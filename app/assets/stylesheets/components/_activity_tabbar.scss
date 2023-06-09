@@ -10,11 +10,14 @@
 .nav-link-tab{
   width: 200px;
   font-weight: 700;
+  color: black;
+  background: white;
 }
 
 .nav-link-tab:not(.active){
   background-color:rgb(241, 241, 241) !important;
   font-weight: lighter;
+  color: black;
 }
 
 /* #nav-profile{

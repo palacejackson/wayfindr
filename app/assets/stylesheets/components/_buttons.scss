@@ -9,6 +9,20 @@
   color: black;
 }
 
+// .btn-purple-landing{
+//   background-color:$purple;
+//   color: white;
+//   font-weight: bold;
+// }
+
+
+// .btn-purple-landing:hover{
+//   // border: 2px solid $purple;
+//   color: white;
+//   // font-weight: bold;
+//   background-color:$purple;
+// }
+
 .btn-purple-border{
   border: 2px solid $purple;
 }
@@ -18,7 +32,6 @@
   background-color: $purple;
   color: white;
 }
-
 
 #landing-form button {
   font-size: 20px;
@@ -30,4 +43,10 @@
   background-color: $light-gray;
   color: $purple;
 
+
+.more-info{
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  margin-bottom: 12px;
 }
