@@ -16,12 +16,12 @@
         <div class="header-container d-flex justify-content-between">
           <div class="activity-title"><%= activity.name %> </div>
 
-          <div class="price-range"> £-££</div>
+          <%# <div class="price-range"> £-££</div> %>
         </div>
         <p class="card-text mb-3"><%= activity.details %></p>
         <div class="d-flex justify-content-start">
           <%# MODAL BUTTON HERE %>
-          <button type="button" class="btn btn-purple btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%= activity.id%>">
+          <button type="button" class="btn btn-purple btn-sm more-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%= activity.id%>">
             More info
           </button>
           <%= render 'activities/activity_show', activity: activity %>
