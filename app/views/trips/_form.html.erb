@@ -6,8 +6,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-    <%= f.input :destination %>
-    <%= f.label :number_of_guests %>
+      <%= f.label :destination %>
+      <%=f.text_field :destination, style: 'text-transform: capitalize;', class:"border-form w-100 mt-2" %>
+    <%# <%= f.input :destination %><br>
+    <%= f.label :number_of_guests, class:"mt-2 "%>
     <%= f.input :number_of_guests, input_html: {class: "form-control mt-2 w-25"},class:"form-control", label: false, placeholder: "3", collection: [1,2,3,4,5,'6+'] %>
     <%= f.input :start_date,
               as: :string,
