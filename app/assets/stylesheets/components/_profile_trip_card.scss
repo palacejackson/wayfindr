@@ -15,6 +15,20 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+#profile-header {
+  background-color: $purple;
+}
+
+#trip-header {
+  color: $white;
+  font-weight: 400;
+  text-shadow: -1px 2px $purple;
+}
+
+#new-trip-header {
+  color: $purple;
+}
+
 #header-dates {
   margin-top: 63px;
 }

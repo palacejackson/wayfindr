@@ -2,11 +2,11 @@
 <div class="modal fade" id="staticBackdrop<%= activity.id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <button type="button" class="btn-close mt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-x mt-3" data-bs-dismiss="modal" aria-label="Close"></button>
       <div class="modal-body">
 
       <!-- activity_show section -->
-        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1561865406-97a1a7e82506?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);">
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= activities.image_url %>);">
           <div class="container">
           </div>
         </div>
@@ -14,7 +14,6 @@
 
         <div class="container">
           <h1 class="activity-name mt-3"> <%= activity.name %> </h1>
-          <%# <%= @activities.name %>
           <div class="info-card row mt-4">
 
             <div class="col-md-6 mb-4">
@@ -26,17 +25,17 @@
             <div class="col-md-6 mb-4 activity-details">
 
               <div>
-                <%# DO THIS AT SOME POINT <%= '⭐' * category.rating %>
-                <h4 class="mt-5"><strong>Rating: ⭐⭐⭐⭐⭐ </strong></h4>
+                <%# DO THIS AT SOME POINT <%= '⭐' * activity.rating %>
+                <h4 class="mt-5"><strong>Rating: <%= '⭐' * activity.rating %> </strong></h4>
               </div>
             </div>
 
             <div class="col-md-6 mb-4 activity-details">
-              <h6><i class="fa-solid fa-landmark"></i><strong> Category:</strong> Museum</h6>
-              <h6><i class="fa-solid fa-location-dot"></i><strong> Location:</strong> Rome</h6>
-              <h6><i class="fa-solid fa-map-location"></i><strong> Address:</strong> Piazza del Colosseo, 1, 00184 Roma RM, Italy</h6>
-              <h6><i class="fa-solid fa-phone"></i><strong> Telephone number:</strong> +39 06 3996 7700</h6>
-              <h6><i class="fa-solid fa-clock"></i><strong> Opening hours:</strong></h6>
+              <h6><i class="fa-solid fa-landmark"></i><strong> Category:</strong><%= activity.type %></h6>
+              <h6><i class="fa-solid fa-location-dot"></i><strong> Location:</strong><%= activity.location %></h6>
+              <h6><i class="fa-solid fa-map-location"></i><strong> Address:</strong><%= activity.address %></h6>
+              <h6><i class="fa-solid fa-phone"></i><strong> Telephone number:</strong><%= activity.phone_number %></h6>
+              <h6><i class="fa-solid fa-clock"></i><strong> Opening hours:</strong><%= activity.opening_hours %></h6>
             </div>
             <%# <div class="mb-3"></div> %>
           </div>
