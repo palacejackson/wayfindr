@@ -11,15 +11,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   </head>
 
-  <body class>
+  <body data-controller="navbar">
   <%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
 
     <%= yield %>
 
-    <% unless action_name == "show" %>
-      <%= render "shared/footer" %>
-    <% end %>
+  <%= render "shared/footer" unless @skip_footer %>
 
   </body>
 </html>
