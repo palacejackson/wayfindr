@@ -15,4 +15,5 @@ class Trip < ApplicationRecord
   def num_days
     (self.end_date - self.start_date).to_i
   end
+
 end
