@@ -2,7 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-
 }
 
 .main {
@@ -20,8 +19,8 @@ body {
   position: absolute;
   height: auto;
   width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30%;
+  // transform: translateY(-50%);
   text-align: center;
 
   #head{
