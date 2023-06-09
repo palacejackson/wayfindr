@@ -1,0 +1,27 @@
+  <div class="card bg-white p-4 m-3 d-flex flex-row">
+    <% @trips.each do |trip|  %>
+      <% if trip.start_date > Date.today  %>
+        <div class="card bg-light text-white me-5 profile-trip-card
+         <% case trip.destination %>
+         <% when "London" %>
+         <%= 'london-trip-card' %>
+         <% when "Paris" %>
+         <%= 'paris-trip-card' %>
+         <% when "Budapest" %>
+         <%= 'budapest-trip-card' %>
+         <% end %>"
+          data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="travel dates"
+          data-bs-content="<%= trip.start_date.to_fs(:long_ordinal) %> to <%= trip.end_date.to_fs(:long_ordinal) %>"
+          data-animation="">
+          <%= link_to trip_path(trip) do %>
+          <div class="card-img-overlay">
+            <div class="d-flex justify-content-between">
+              <h2 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top" id="trip-header"><%= trip.destination %></h2>
+              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
+            </div>
+            <h5 class="card-text" id="header-dates" style="color: white;">D<%= (Date.today - trip.start_date).to_i %></h5>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
+    <% end %>
