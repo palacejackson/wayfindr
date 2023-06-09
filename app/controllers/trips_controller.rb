@@ -4,10 +4,12 @@ class TripsController < ApplicationController
     @trip_activities = []
     @trip.num_days.times do
       activities = []
+      start = Time.now
       3.times do
         activity = @trip.activities.sample
         while activities.any? { |act| act.activity_type == activity.activity_type || @trip_activities.flatten.include?(activity)}
           activity = @trip.activities.sample
+          break if (Time.now - start) > 20
         end
         activities << activity
       end
