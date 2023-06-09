@@ -1,0 +1,14 @@
+
+$custom-black: #292A28;
+$custom-grey: #ADAFAC;
+$custom-white: #F5F5F5;
+$purple: #925CFF;
+$green-blue: #4ED0C1;
+
+$custom-colors: (
+  "custom-black": $custom-black #292A28,
+  "custom-grey": $custom-grey #ADAFAC,
+  "custom-white": $custom-white #F5F5F5,
+  "purple": $purple,
+  "green-blue": $green-blue
+);
