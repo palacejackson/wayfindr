@@ -91,30 +91,30 @@ cities.each do |city|
         activity.daytime == true
       end
 
-      photos = results["photos"]
+      # photos = results["photos"]
 
-      unless photos && photos.empty?
+      # unless photos && photos.empty?
 
-        if photos.count < 5
-          length = photos.count
-          first_five = photos[0...length]
-        else
-          first_five = photos[0..4]
-        end
-        photo_id = 0
+      #   if photos.count < 5
+      #     length = photos.count
+      #     first_five = photos[0...length]
+      #   else
+      #     first_five = photos[0..4]
+      #   end
+      #   photo_id = 0
 
-        puts "Adding photos..."
+      #   puts "Adding photos..."
 
-        first_five.each do |photo|
-          photo_reference = photo["photo_reference"]
-          photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=#{photo_reference}&key=#{google_api_key}"
-          begin file = URI.open(photo_url)
-            activity.photos.attach(io: file, filename: "#{results[name]}#{photo_id += 1}", content_type: "image/jpg")
-          rescue OpenURI::HTTPError
-          end
-          puts "attached? #{activity.photos.attached?}"
-        end
-      end
+      #   first_five.each do |photo|
+      #     photo_reference = photo["photo_reference"]
+      #     photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=#{photo_reference}&key=#{google_api_key}"
+      #     begin file = URI.open(photo_url)
+      #       activity.photos.attach(io: file, filename: "#{results[name]}#{photo_id += 1}", content_type: "image/jpg")
+      #     rescue OpenURI::HTTPError
+      #     end
+      #     puts "attached? #{activity.photos.attached?}"
+      #   end
+      # end
       activity.save!
     end
   end
