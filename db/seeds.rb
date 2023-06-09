@@ -29,7 +29,7 @@ cities =
 
 categories =
   %w[
-    museums parks sights restaurants
+    museums parks sights restaurants walking+tours
   ]
 
 puts "Clearing databsae..."
