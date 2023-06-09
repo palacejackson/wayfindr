@@ -40,6 +40,14 @@
   }
 }
 
+.upcoming-header {
+  border-radius: 10px;
+  width: 407px;
+  padding: 13px;
+  text-align: center;
+  background-color: #ebdff2;
+}
+
 .new-trip-card {
   width: 250px;
   height: 150px;
@@ -49,6 +57,7 @@
 
 #profile-header {
   background-color: $purple;
+  font: $headers-font;
 }
 
 #trip-header {

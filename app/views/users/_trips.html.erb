@@ -1,5 +1,5 @@
   <div class="card bg-white p-4 m-3 d-flex flex-row">
-    <% @trips.each do |trip|  %>
+    <% @trips[0..3].each do |trip|  %>
       <% if trip.start_date > Date.today  %>
         <div class="card bg-light text-white me-5 profile-trip-card
          <% case trip.destination %>
