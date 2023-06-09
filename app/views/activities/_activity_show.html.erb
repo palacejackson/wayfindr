@@ -6,7 +6,7 @@
       <div class="modal-body">
 
       <!-- activity_show section -->
-        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= activities.image_url %>);">
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= activity.website_url %>);">
           <div class="container">
           </div>
         </div>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="col-md-6 mb-4 activity-details">
-              <h6><i class="fa-solid fa-landmark"></i><strong> Category:</strong><%= activity.type %></h6>
+              <h6><i class="fa-solid fa-landmark"></i><strong> Category:</strong><%= activity.activity_type %></h6>
               <h6><i class="fa-solid fa-location-dot"></i><strong> Location:</strong><%= activity.location %></h6>
               <h6><i class="fa-solid fa-map-location"></i><strong> Address:</strong><%= activity.address %></h6>
               <h6><i class="fa-solid fa-phone"></i><strong> Telephone number:</strong><%= activity.phone_number %></h6>

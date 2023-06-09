@@ -2,16 +2,17 @@ class TripsController < ApplicationController
   def show
     @trip = Trip.find(params[:id])
     @trip_activities = []
+    remaining_activities = @trip.activities
     @trip.num_days.times do
       activities = []
-      start = Time.now
       3.times do
-        activity = @trip.activities.sample
-        while activities.any? { |act| act.activity_type == activity.activity_type || @trip_activities.flatten.include?(activity)}
-          activity = @trip.activities.sample
-          break if (Time.now - start) > 20
+        if remaining_activities.empty?
+          activities << @trip.activities.sample
+        else
+          activity_picked = remaining_activities.sample
+          activities << activity_picked
+          remaining_activities.delete(activity_picked)
         end
-        activities << activity
       end
       @trip_activities << activities
     end
@@ -29,6 +30,7 @@ class TripsController < ApplicationController
           activities = Activity.all.select do |activity|
             category == activity.activity_type && @trip.destination == activity.location
           end
+          activities = activities.uniq { |a| a.name }
           @trip.activities << activities
         end
 
