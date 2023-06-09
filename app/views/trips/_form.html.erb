@@ -1,4 +1,4 @@
- <div class="modal-content">
+<div class="modal-content">
   <%= simple_form_for(@trip) do |f| %>
         <%# <h1 class=" modal-title fs-5 " id="modalToggleLabel">Create your trip</h1> %>
       <div class="modal-header">
@@ -23,6 +23,6 @@
     <%= f.submit "Go to activities", class: "btn btn-primary m-3" %>
         <button class="btn btn-primary d-none" data-bs-target="#selectActivitiesModal" data-bs-toggle="modal">Go to activities</button>
       </div>
-<% end %>
-    </div>
+  <% end  %>
+</div>
   <%# <div class="trip-form"></div> %>
