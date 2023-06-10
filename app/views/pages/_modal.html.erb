@@ -31,8 +31,7 @@
 
 <% if current_user %>
   <form id="landing-form" name="landing-form">
-    <input type="text" name="landing-form" placeholder="Where would you like to go?" data-landing-page-target="textbox">
-    <button class="btn btn-purple p-2 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal" data-action="click->landing-page#submit"><strong>Show me the way</strong></button>
+    <button class="btn btn-purple p-3 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal" data-action="click->landing-page#submit"><strong>Show me the way</strong></button>
   </form>
 <% else %>
   <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-primary' %>

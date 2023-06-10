@@ -2,73 +2,28 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.main {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  top: -80px;
+.banner-image {
   background-image: url("paris.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
-.main .landing-info {
-  position: absolute;
-  height: auto;
+
+#head{
   width: 100%;
-  top: 30%;
-  // transform: translateY(-50%);
   text-align: center;
+  font-size: 70px;
+  font-weight: 500;
+  color: $light-gray
+}
 
-  #head{
-    position: relative;
-    height: auto;
-    width: 100%;
-    text-align: center;
-    font-size: 150px;
-    font-weight: 500;
-    color: $light-gray
-  }
-
-  #body{
-    position: relative;
-    height: auto;
-    width: 100%;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 500;
-    color: $light-gray
-  }
-
-  #landing-form {
-  position: relative;
-  height: auto;
-  width: 60%;
-  background: transparent;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-
-  #landing-form input[type="text"]{
-    height: 52px;
-    width: 80%;
-    border-radius: 4px;
-    border: 2px solid $purple;
-  }
-
-  #landing-form input[placeholder="Where would you like to go?"]{
-    padding-left: 10px;
-    font-size: 20px;
-  }
-
-
-
-
-
+#body{
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: $light-gray
 }

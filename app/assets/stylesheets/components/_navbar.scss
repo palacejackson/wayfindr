@@ -6,24 +6,48 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 50px;
+#navbar-logo {
+  text-align: center;
+
+  img {
+    width: 50px;
+  }
 }
 
-.white-background {
-  background-color: $light-gray;
-  color: $custom-black;
-  font-size: 18px;
+#navbar-wayfindr {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
+
+#logo-and-wayfindr {
+  display: flex;
+  align-items: center;
+}
+
+.solid {
+  background-color: $purple;
+
+  .nav-link {
+    color: $light-gray !important;
+    font-size: 20px;
+  }
+
+  #navbar-wayfindr {
+    color: $light-gray;
+  }
+}
+
 
 .transparent {
   background-color: transparent;
-  z-index: 90;
-  position: sticky;
-  top: 0px;
 
     .nav-link {
       color: $light-gray !important;
-      font-size: 18px;
+      font-size: 20px;
+    }
+
+    #navbar-wayfindr {
+      color: $light-gray;
     }
 }
