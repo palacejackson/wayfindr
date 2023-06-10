@@ -16,6 +16,13 @@ class TripsController < ApplicationController
       end
       @trip_activities << activities
     end
+
+    @activity_markers = @activity.geocoded.map do |a|
+      {
+        lat: a.latitude,
+        lng: a.longitude
+      }
+    end
   end
 
   def new
