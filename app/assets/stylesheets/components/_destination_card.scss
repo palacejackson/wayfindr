@@ -16,9 +16,9 @@
   z-index: 1;
 
   .icons{
-    position: absolute;
-    right: 86px;
-    top: 96px;
+    // position: absolute;
+    left: 1200px;
+    top: -82px;
     // margin-bottom: 250px;
     // margin-right: 10px;
     // font-size: 28px;
@@ -56,4 +56,20 @@ h1{
 }
 .destination-bookmark:hover{
   opacity: 1;
+}
+
+#destination-card-inner {
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  margin-left: 10px;
 }
