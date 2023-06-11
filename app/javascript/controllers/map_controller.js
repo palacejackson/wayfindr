@@ -22,7 +22,7 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
 
-  #addMarkersToMap() {
+  #addMarkersToMap(markers) {
     markers.forEach((marker) => {
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
