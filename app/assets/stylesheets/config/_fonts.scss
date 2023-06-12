@@ -1,5 +1,5 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Palanquin+Dark:wght@400;500;600&family=Raleway:wght@100;200;300;400;500;600&family=Urbanist:wght@100;200;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400&family=Palanquin+Dark:wght@400;500;600&family=Raleway:wght@100;200;300;400;500;600&family=Urbanist:wght@100;200;500;600;700&display=swap');
 
 // Define fonts for body and headers
 $body-font: "Lato", "sans-serif";
@@ -14,3 +14,8 @@ $headers-font: "Raleway", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+
+p {
+  font-weight: 300;
+}

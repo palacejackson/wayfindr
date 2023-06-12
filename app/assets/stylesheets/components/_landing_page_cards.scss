@@ -5,28 +5,33 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 12px;
 }
 
 .card-info {
   // background-size: cover;
   // background-position: center;
   text-align: center;
-  padding: 15px;
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   color: $custom-black;
   font-size: 18px;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+
+  .info-header {
+    font-size: 20px;
+  }
+
+  i {
+    font-size: 60px;
+
+  }
 }
 
-.info-header {
-  font-size: 20px;
-}
 
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
