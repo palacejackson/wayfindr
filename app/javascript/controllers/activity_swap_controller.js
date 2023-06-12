@@ -10,8 +10,9 @@ export default class extends Controller {
 
   swap(e) {
     e.preventDefault();
-    let swappedActivity = trip.activities.where(id: 37);
+    const swappedActivityId = e.target.dataset.id
     console.log(swappedActivity);
     console.log(e.target.dataset.id);
+    fetch()
   }
 }
