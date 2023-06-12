@@ -18,7 +18,7 @@ export default class extends Controller {
     })
 
     this.#addMarkersToMap(this.markersValue)
-    this.#addMarkersToMap(this.activityMarkersValue)
+    this.#addActivityMarkersToMap(this.activityMarkersValue)
     this.#fitMapToMarkers()
   }
 
@@ -28,6 +28,15 @@ export default class extends Controller {
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(this.map)
     })
+  }
+
+  #addActivityMarkersToMap(activityMarkers) {
+    activityMarkers.forEach((marker) => {
+      new mapboxgl.Marker()
+        .setLngLat([ marker.lng, marker.lat ])
+        .addTo(this.map)
+    })
+
   }
 
   #fitMapToMarkers() {
