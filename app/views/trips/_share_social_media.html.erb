@@ -1,0 +1,8 @@
+  <%# Whatsapp %>
+  <%= link_to "https://api.whatsapp.com/send?text=https://localhost:3000/#{controller_name}/#{@trip.id}" do %>
+    <i class="fa-brands fa-whatsapp fa-xl" style="color: #41cb1a;"></i>
+    <% end %>
+    <%# Twitter %>
+  <%= link_to "https://twitter.com/intent/tweet?text=https://localhost:3000/#{controller_name}/#{@trip.id}" do %>
+    <i class="fa-brands fa-square-twitter fa-xl" style="color: #0e63f6;"></i>
+    <% end %>

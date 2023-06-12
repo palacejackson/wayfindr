@@ -4,6 +4,7 @@
 data-controller="activity-swap">
 
   <% activities.each do |activity| %>
+
     <div class="card mt-4" style="width: 18rem;" data-activity-swap-target="activityCard" data-id="<%= activity.id %>">
 
         <%# NEED TO ADD daytime? logic %>
@@ -55,6 +56,9 @@ data-controller="activity-swap">
         </div>
       </div>
     </div>
+
+    <%= render "/trip_activity/trip_activity", activity: activity %>
+
   <% end %>
 
 

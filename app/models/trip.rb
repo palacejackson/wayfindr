@@ -28,7 +28,7 @@ class Trip < ApplicationRecord
   end
 
   def day_activities(day)
-    activities.where(id: self.trip_activities.where(locked: true).where(day: day).pluck(:activity_id))
+    activities.where(id: self.trip_activities.where(locked: true).where(day: day).pluck(:activity_id)).uniq
   end
 
   def activities_by_day
