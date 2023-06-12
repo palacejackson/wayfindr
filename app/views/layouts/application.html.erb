@@ -13,6 +13,8 @@
   </head>
 
   <body data-controller="navbar">
+
+  <%= render "/pages/modal" if @landing_modal%>
   <%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
 

@@ -33,13 +33,15 @@
 
   </div>
 
-  <div class="profile-container my-5">
+    <div class="profile-container my-5">
 
-  <div class="trips-container">
-    <div>
-      <h3 class="m-3">Your past trips:</h3>
-    </div>
-      <%= render "past_trips", locals: {trips: @trips} %>
+    <div class="trips-container">
+      <div>
+        <h3 class="m-3">Your past trips:</h3>
+      </div>
+      <div class="upcoming-trips">
+        <%= render "past_trips", locals: {trips: @trips} %>
+      </div>
     </div>
   </div>
 

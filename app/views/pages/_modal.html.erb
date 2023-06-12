@@ -1,7 +1,7 @@
 <% if @trip.errors.any?  %>
   <script defer>
     function showModal() {
-      new bootstrap.Modal(document.getElementById('createTripModal')).show();
+      new bootstrap.Modal("#createtripmodal").show();
     }
     showModal();
   </script>
@@ -10,23 +10,5 @@
 <div class="modal fade" id="createTripModal" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <%= render partial: "trips/form" %>
-  </div>
-</div>
-
-
-<div class="modal fade" id="selectActivitiesModal" aria-hidden="true" aria-labelledby="modalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalToggleLabel2">Check your favorite activities</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <%# render checkboxes form %>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#modalToggle" data-bs-toggle="">Way to your trip</button>
-      </div>
-    </div>
   </div>
 </div>

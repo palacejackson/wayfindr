@@ -30,7 +30,8 @@
   margin-bottom: 20px;
   overflow: hidden;
   transition: 0.3s;
-
+  display: flex;
+  justify-content: center;
 
   img {
     width: 100%;
@@ -39,13 +40,22 @@
 
   }
 
-  #trip-card {
+  #trip-card-info {
+    z-index: 1000;
+    width: 90%;
     position: absolute;
     bottom: 8px;
-    left: 16px;
+    left: 12px;
     color: $light-gray;
     font-size: 2rem;
     transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fa-trash-can {
+    color: $light-gray;
+    font-size: 14px;
   }
 }
 
@@ -53,10 +63,13 @@
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
 
-  #trip-card {
-    font-size: 36px;
+  #trip-card-info {
+    font-size: 3rem;
   }
 }
+
+
+
 
 
 
