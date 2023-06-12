@@ -3,7 +3,16 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @trip_activities = @trip.activities_by_day
     @remaining_activities = @trip.remaining_activities
-    @transparent = true
+    
+    @activity_markers = @trip.activities.geocoded.map do |a|
+      {
+        lat: a.latitude,
+        lng: a.longitude,
+        activitymap_info_html: render_to_string(partial: "activitymap_info", locals: { activity: a }),
+        map_marker_html: render_to_string(partial: "map_marker")
+      }
+    end
+  @transparent = true
   end
 
   def new

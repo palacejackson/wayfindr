@@ -9,4 +9,7 @@ class Activity < ApplicationRecord
   validates :details, presence: true
   validates :rating, numericality: { only_float: true, in: (0..10) }
   validates :website_url, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
