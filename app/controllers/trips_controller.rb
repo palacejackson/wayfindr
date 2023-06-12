@@ -13,7 +13,8 @@ class TripsController < ApplicationController
         map_marker_html: render_to_string(partial: "map_marker")
       }
     end
-  @transparent = true
+
+    @transparent = true
   end
 
   def new

@@ -15,7 +15,7 @@
 # Activity.new = (location:, type:, name: , details: , rating: , image_url: , website_url: , daytime:)
 
 # budapest paris berlin prague rome
-# cathedrals markets secret+bars walking+tours cheap+eats bars pubs cafes
+# cathedrals markets secret+bars cheap+eats bars pubs cafes
 
 require "open-uri"
 require "json"
@@ -30,7 +30,7 @@ cities =
 
 categories =
   %w[
-    museums parks sights restaurants walking+tours
+    museums parks sights restaurants walking+tours bars cafes cheap+eats
   ]
 
 puts "Clearing databsae..."
@@ -87,9 +87,9 @@ cities.each do |city|
       )
 
       if category == ("secret+bars" || "restaurants" || "bars" || "pubs")
-        activity.daytime == false
+        activity.daytime = false
       else
-        activity.daytime == true
+        activity.daytime = true
       end
 
       # photos = results["photos"]
