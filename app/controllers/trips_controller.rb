@@ -3,8 +3,9 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @trip_activities = @trip.activities_by_day
     @remaining_activities = @trip.remaining_activities
-
-    @activity_markers = @trip.activities.geocoded.map do |a|
+    @trip_activity_ids = TripActivity.where(trip_id: Trip.find(params[:id]), locked: true).pluck(:activity_id)
+    @activities = Activity.where(id: @trip_activity_ids)
+    @activity_markers = @activities.geocoded.map do |a|
       {
         lat: a.latitude,
         lng: a.longitude,

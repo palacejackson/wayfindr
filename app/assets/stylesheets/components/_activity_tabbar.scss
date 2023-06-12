@@ -1,7 +1,3 @@
-/* #nav-home{
-
-} */
-
 #nav-home-tab{
   color: black;
   background: white;
@@ -10,14 +6,14 @@
 .nav-link-tab{
   width: 200px;
   font-weight: 700;
-  color: black;
-  background: white;
+  color: white !important;
+  background: $purple !important;
 }
 
 .nav-link-tab:not(.active){
-  background-color:rgb(241, 241, 241) !important;
+  background-color: #e0e0e0 !important;
   font-weight: lighter;
-  color: black;
+  color: black !important;
 }
 
 /* #nav-profile{
