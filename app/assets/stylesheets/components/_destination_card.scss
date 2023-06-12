@@ -1,19 +1,30 @@
-// .destination-card-outer {
-//   background-size: cover;
-//   background-position: center;
-//   height: 300px;
-//   display: flex;
-// /*   justify-content: center; */
-//   text-align: start;
-//   align-items: center;
-//   color: white;
-//   font-size: 28px;
-//   font-weight: bold;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   opacity: 0.8;
-//   z-index: 1;
+.destination-card-outer {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+/*   justify-content: center; */
+  text-align: start;
+  align-items: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  opacity: 0.8;
+  z-index: 1;
+
+  .icons{
+    // position: absolute;
+    left: 1200px;
+    top: -82px;
+    // margin-bottom: 250px;
+    // margin-right: 10px;
+    // font-size: 28px;
+    color: white;
+  }
+}
 
 //   .icons{
 //     position: absolute;
@@ -96,4 +107,20 @@
     h2 {
       font-size: 18px;
     }
+}
+
+#destination-card-inner {
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  margin-left: 10px;
 }
