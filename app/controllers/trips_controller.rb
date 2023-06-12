@@ -56,6 +56,12 @@ class TripsController < ApplicationController
   def update
   end
 
+  def destroy
+    @trip = Trip.find(params[:id])
+    @trip.destroy
+    redirect_to user_show_path, status: :see_other
+  end
+
   private
 
   def trip_params

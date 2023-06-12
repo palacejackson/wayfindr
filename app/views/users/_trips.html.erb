@@ -13,7 +13,13 @@
         <% when "Budapest" %>
           <a href="/trips/<%=trip.id%>"><%= image_tag("budapest.jpg") %></a>
       <% end %>
-        <p id="trip-card"><%= trip.destination %></p>
+      <div class="trip-card-info">
+        <div><p id="trip-card"><%= trip.destination %></p></div>
+        <div><%= link_to trip_path(trip), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete your trip to #{@trip.destination}?"} do %>
+        <p class="fa-regular fa-trash-can" style="color: #F5F5F5;"></p>
+        <% end %>
+        </div>
+      </div>
     </div>
   <% end %>
 <% end %>
