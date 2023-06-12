@@ -57,11 +57,13 @@
   position: absolute;
   right: 6px;
   bottom: 4px;
+  opacity: 0.8;
 }
 
 .fa-rotate:hover{
   color: black;
   font-weight: bold;
+  opacity: 1;
 }
 
 .card-bookmark{

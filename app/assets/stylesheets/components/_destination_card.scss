@@ -138,13 +138,13 @@
 .icons {
   position: absolute;
   cursor: pointer;
-  display: flex;
-  align-items: center;
   color: white;
   font-size: 40px;
   right: 10px;
-  bottom: 4px;
+  bottom: -195px;
   opacity: 0.8;
+  // display: flex;
+  // align-items: center;
 }
 
 .icons:hover{
