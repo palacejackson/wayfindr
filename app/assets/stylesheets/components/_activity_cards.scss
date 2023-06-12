@@ -13,6 +13,7 @@
 .activity-title{
   font-size: 20px;
   color: $custom-grey;
+  margin-top: 5px;
 }
 
 .card-text{
@@ -72,13 +73,14 @@
   color: #6B7280;
 }
 
-.price-range{
+.activity-icon{
 /*  margin-left: 100px; */
   position: absolute;
-  right: 0;
+  right: -6px;
   margin-right: 10px;
   font-size: 20px;
   color: $custom-black;
+  top: 242px;
 }
 
 

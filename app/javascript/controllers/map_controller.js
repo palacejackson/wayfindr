@@ -6,7 +6,6 @@ export default class extends Controller {
   static values = {
     apiKey: String,
     markers: Array,
-    activityMarkers: Array
   }
 
   connect() {
@@ -18,7 +17,7 @@ export default class extends Controller {
     })
 
     this.#addMarkersToMap(this.markersValue)
-    this.#addActivityMarkersToMap(this.activityMarkersValue)
+    this.#addActivityMarkersToMap(this.markersValue)
     this.#fitMapToMarkers()
   }
 
@@ -32,8 +31,16 @@ export default class extends Controller {
 
   #addActivityMarkersToMap(activityMarkers) {
     activityMarkers.forEach((marker) => {
-      new mapboxgl.Marker()
+      // console.log(marker);
+      // console.log(marker.activitymap_info_html)
+      const popup = new mapboxgl.Popup().setHTML(marker.activitymap_info_html)
+
+      const customMarker = document.createElement("div")
+      customMarker.innerHTML = marker.map_marker_html
+
+      new mapboxgl.Marker(customMarker)
         .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
         .addTo(this.map)
     })
 
@@ -42,7 +49,7 @@ export default class extends Controller {
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.activityMarkersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+    // this.activityMarkersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 
