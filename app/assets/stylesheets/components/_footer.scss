@@ -1,26 +1,26 @@
-.footer {
+.fixed-footer {
   // background: #F4F4F4;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 120px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   margin-top: 200px;
 }
+
 .footer-logo {
-  // display: flex;
   align-self: center !important;
 }
 
 .logo{
-  width: 80px;
+  width: 60px;
+
  }
 
 .footer-links {
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 
 .footer-links a {

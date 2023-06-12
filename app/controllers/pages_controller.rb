@@ -8,5 +8,7 @@ class PagesController < ApplicationController
     end
 
     @skip_footer = true
+    @transparent = true
+    @landing_modal = true
   end
 end

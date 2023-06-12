@@ -1,12 +1,30 @@
-<div class="main">
 
-  <div class="landing-info" data-controller="landing-page">
+<main>
+  <div  class="landing-info banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+        data-controller="landing-page">
 
-      <h1 id="head">Wayfindr</h1>
+    <div class="content text-center">
+
+      <h3 id="head">Your dream holiday starts here</h3>
       <p id="body">Find your way to the perfect trip</p>
-
-      <%= render "/pages/modal" %>
-
+        <% if current_user %>
+          <form id="landing-form" name="landing-form">
+            <button class="btn btn-purple p-3 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal" data-action="click->landing-page#submit"><strong>Show me the way</strong></button>
+          </form>
+        <% else %>
+          <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-primary' %>
+        <% end %>
+    </div>
   </div>
 
- </div>
+
+  <div class="container my-5 d-grid gap-5">
+    <h2>How it works:</h2>
+    <p>Simply tell us you are headed, how long for and which activities take your fancy</p>
+    <p>Sit back and let us compile an itinerary for your trip</p>
+    <p>Customise your itinerary by selecting which activities you like to look of and which you want to swap</p>
+  </div>
+
+</main>
+
+<%= render "/pages/modal"%>

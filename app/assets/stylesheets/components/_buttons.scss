@@ -1,7 +1,7 @@
 .btn-purple{
   background-color:$purple;
   color: white;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .btn-purple:hover{
@@ -37,6 +37,8 @@
   font-size: 20px;
   font-weight: 400;
   border: 2px solid $light-gray;
+  background-color: $purple;
+  opacity: 0.8;
 }
 
 #landing-form button:hover {

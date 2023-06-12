@@ -1,7 +1,7 @@
 <% if @trip.errors.any?  %>
   <script defer>
     function showModal() {
-      new bootstrap.Modal('#createTripModal').show();
+      new bootstrap.Modal(document.getElementById('createTripModal')).show();
     }
     showModal();
   </script>
@@ -12,6 +12,8 @@
     <%= render partial: "trips/form" %>
   </div>
 </div>
+
+
 <div class="modal fade" id="selectActivitiesModal" aria-hidden="true" aria-labelledby="modalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -28,12 +30,3 @@
     </div>
   </div>
 </div>
-
-<% if current_user %>
-  <form id="landing-form" name="landing-form">
-    <input type="text" name="landing-form" placeholder="Where would you like to go?" data-landing-page-target="textbox">
-    <button class="btn btn-purple p-2 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal" data-action="click->landing-page#submit"><strong>Show me the way</strong></button>
-  </form>
-<% else %>
-  <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-primary' %>
-<% end %>

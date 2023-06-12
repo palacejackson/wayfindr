@@ -1,0 +1,22 @@
+#new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+
+#new-trip {
+  color: $purple !important;
+  text-align: center;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+
+#new:hover {
+
+  #new-trip {
+  font-size: 36px;
+  }
+}

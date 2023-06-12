@@ -1,13 +1,46 @@
-<h1 id="profile-header" class="mt-2 stext-dark p-2" style="text-align: right;"><%= @user.username%>'s profile</h1>
-<div style="width: 50vm;">
-  <h3 class="m-3 upcoming-header">YOUR UPCOMING TRIPS:</h3>
-</div>
+<div class="container profile-header mt-2 p-2" style="text-align: left;">
 
-<div class="container d-flex flex-row justify-content-between">
-    <%= render "trips", locals: {trips: @trips} %>
-    <%= render "new_trip" %>
+  <div class="user-full-info">
+    <div><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large", alt: "dropdown menu" %> </div>
+
+    <div class="user-info px-3">
+      <h1>Hello <%= @user.username%></h1>
+      <p class="my-1"><%= @user.first_name.capitalize%> <%= @user.last_name.capitalize %></p>
+      <p><%= @user.email %></p>
+    </div>
   </div>
-  <%= render "map" %>
+
+  <div class="profile-map">
+    <%= render "map" %>
+  </div>
+
 </div>
 
-<%= render "past_trips", locals: {trips: @trips} %>
+<div class="container">
+
+
+  <div class="profile-container my-5">
+
+    <div class="trips-container">
+      <div>
+        <h3 class="m-3">Your upcoming trips:</h3>
+      </div>
+      <div class="upcoming-trips">
+        <%= render "trips", locals: {trips: @trips} %>
+        <%= render "new_trip" %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="profile-container my-5">
+
+  <div class="trips-container">
+    <div>
+      <h3 class="m-3">Your past trips:</h3>
+    </div>
+      <%= render "past_trips", locals: {trips: @trips} %>
+    </div>
+  </div>
+
+</div>

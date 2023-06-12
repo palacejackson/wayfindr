@@ -23,6 +23,7 @@ class TripsController < ApplicationController
         lng: a.longitude
       }
     end
+    @transparent = true
   end
 
   def new
