@@ -213,6 +213,7 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails-social-share-button (0.0.2)
     railties (7.0.5)
       actionpack (= 7.0.5)
       activesupport (= 7.0.5)
@@ -309,6 +310,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 5.0)
   rails (~> 7.0.5)
+  rails-social-share-button
   sassc-rails
   selenium-webdriver
   simple_form!
