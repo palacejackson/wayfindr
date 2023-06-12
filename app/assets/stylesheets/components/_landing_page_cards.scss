@@ -12,15 +12,19 @@
   // background-size: cover;
   // background-position: center;
   text-align: center;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  height: 250px;
   color: $custom-black;
   font-size: 18px;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+
+  .inner-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+  }
 
   .info-header {
     font-size: 20px;
@@ -28,9 +32,13 @@
 
   i {
     font-size: 60px;
+  }
 
+  #rotate-landing {
+    color: $custom-black;
   }
 }
+
 
 
 @media (min-width: 100px) and (max-width: 575px) {

@@ -24,8 +24,7 @@ google_api_key = ENV['GOOGLE_API']
 
 cities =
   %w[
-
-    london budapest paris
+    london budapest paris rome
   ]
 
 categories =
