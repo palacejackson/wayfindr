@@ -19,11 +19,21 @@ data-controller="activity-swap">
           <div class="activity-title"><%= activity.name %> </div>
 
           <%# ACTIVITY CATEGORIES GO HERE %>
-          <%# <% if activity.activity_type %>
-          <div class="activity-icon"><i class="fa-solid fa-landmark"></i></div>
+          <% case activity.activity_type %>
+          <% when "Museums" %>
+            <div class="activity-icon"><i class="fa-solid fa-landmark"></i></div>
+          <% when "Parks" %>
+            <div class="activity-icon"><i class="fa-solid fa-tree"></i></div>
+          <% when "Sights" %>
+            <div class="activity-icon"><i class="fa-solid fa-binoculars"></i></div>
+          <% when "Restaurants" %>
+            <div class="activity-icon"><i class="fa-solid fa-utensils"></i></div>
+          <% when "walking+tours" %>
+            <div class="activity-icon"><i class="fa-solid fa-person-walking"></i></div>
+            <%# ADD EXTRA CATEGORIES HERE %>
+          <% end %>
 
-
-
+          <%# <div class="activity-icon"><i class="fa-solid fa-landmark"></i></div> %>
         </div>
         <p class="card-text mb-3"><%= activity.details %></p>
         <div class="d-flex justify-content-start">
