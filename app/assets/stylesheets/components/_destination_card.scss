@@ -15,15 +15,15 @@
   opacity: 0.8;
   z-index: 1;
 
-  .icons{
-    // position: absolute;
-    left: 1200px;
-    top: -82px;
-    // margin-bottom: 250px;
-    // margin-right: 10px;
-    // font-size: 28px;
-    color: white;
-  }
+  // .icons{
+  //   // position: absolute;
+  //   left: 1200px;
+  //   top: -82px;
+  //   // margin-bottom: 250px;
+  //   // margin-right: 10px;
+  //   // font-size: 28px;
+  //   color: white;
+  // }
 }
 
 //   .icons{
@@ -115,10 +115,20 @@
 
 .icons {
   position: absolute;
-  top: 0;
-  right: 0;
+  cursor: pointer;
+  // top: 0;
+  // right: 0;
   display: flex;
   align-items: center;
+  color: white;
+  font-size: 40px;
+  right: 10px;
+  bottom: 4px;
+  opacity: 0.8;
+}
+
+.icons:hover{
+  opacity: 1;
 }
 
 .icons i {
@@ -127,16 +137,4 @@
 
 #destination-card-inner {
   position: relative;
-}
-
-.icons {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-}
-
-.icons i {
-  margin-left: 10px;
 }
