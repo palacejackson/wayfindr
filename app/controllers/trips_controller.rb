@@ -3,7 +3,7 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @trip_activities = @trip.activities_by_day
     @remaining_activities = @trip.remaining_activities
-    
+
     @activity_markers = @trip.activities.geocoded.map do |a|
       {
         lat: a.latitude,
