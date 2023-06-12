@@ -9,9 +9,10 @@ export default class extends Controller {
   }
 
   swap(e) {
-    e.preventDefault()
-    console.log(e)
-    console.log(this.swapButtonTargets)
-    console.log(this.activityCardTargets)
+    e.preventDefault();
+    const swappedActivityId = e.target.dataset.id
+    console.log(swappedActivity);
+    console.log(e.target.dataset.id);
+    fetch()
   }
 }
