@@ -16,18 +16,18 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/streets-v10"
     })
 
-    this.#addMarkersToMap(this.markersValue)
+    // this.#addMarkersToMap(this.markersValue)
     this.#addActivityMarkersToMap(this.markersValue)
     this.#fitMapToMarkers()
   }
 
-  #addMarkersToMap(markers) {
-    markers.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([ marker.lng, marker.lat ])
-        .addTo(this.map)
-    })
-  }
+  // #addMarkersToMap(markers) {
+  //   markers.forEach((marker) => {
+  //     new mapboxgl.Marker()
+  //       .setLngLat([ marker.lng, marker.lat ])
+  //       .addTo(this.map)
+  //   })
+  // }
 
   #addActivityMarkersToMap(activityMarkers) {
     activityMarkers.forEach((marker) => {
@@ -36,6 +36,7 @@ export default class extends Controller {
       const popup = new mapboxgl.Popup().setHTML(marker.activitymap_info_html)
 
       const customMarker = document.createElement("div")
+      customMarker.className = 'marker'
       customMarker.innerHTML = marker.map_marker_html
 
       new mapboxgl.Marker(customMarker)
