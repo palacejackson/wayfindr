@@ -1,9 +1,10 @@
 <%# Currently rendered in trips/index.html.erb %>
 
-<div class="activity-card-container d-flex justify-content-evenly">
+<div class="activity-card-container d-flex justify-content-evenly"
+data-controller="activity-swap">
 
   <% activities.each do |activity| %>
-    <div class="card mt-4" style="width: 18rem;">
+    <div class="card mt-4" style="width: 18rem;" data-activity-swap-target="activityCard" data-id="<%= activity.id %>">
 
         <%# NEED TO ADD daytime? logic %>
         <%# <% if activity.daytime?%>
@@ -17,7 +18,12 @@
         <div class="header-container d-flex justify-content-between">
           <div class="activity-title"><%= activity.name %> </div>
 
-          <%# <div class="price-range"> £-££</div> %>
+          <%# ACTIVITY CATEGORIES GO HERE %>
+          <%# <% if activity.activity_type %>
+          <div class="activity-icon"><i class="fa-solid fa-landmark"></i></div>
+
+
+
         </div>
         <p class="card-text mb-3"><%= activity.details %></p>
         <div class="d-flex justify-content-start">
@@ -29,7 +35,11 @@
         </div>
         <%# MODAL ENDS ABOVE %>
         <div class="features d-flex justify-content-end">
-          <i class="fa-solid fa-rotate"></i>
+          <i class="fa-solid fa-rotate"
+          data-activity-swap-target="swapButton"
+          data-action="click->activity-swap#swap"
+          data-id="<%= activity.id %>"
+          ></i>
           <%# <i class="fa-regular fa-bookmark card-bookmark"></i> %>
         </div>
       </div>

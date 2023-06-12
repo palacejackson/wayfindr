@@ -81,6 +81,7 @@
 .icons i {
   margin-left: 10px;
 }
+
 //   .icons{
 //     position: absolute;
 //     right: 86px;
@@ -123,3 +124,19 @@
 // .destination-bookmark:hover{
 //   opacity: 1;
 // }
+
+#destination-card-inner {
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  margin-left: 10px;
+}
