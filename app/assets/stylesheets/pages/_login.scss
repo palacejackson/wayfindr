@@ -1,0 +1,28 @@
+.user-container-main {
+  color: $custom-black;
+  display: flex;
+  justify-content: center;
+
+}
+
+.user-container {
+  position: relative;
+  margin: auto;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  width: 30%;
+  padding: 15px;
+}
+
+#create-container {
+  position: relative;
+  margin: auto;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
