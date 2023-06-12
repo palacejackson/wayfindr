@@ -28,15 +28,16 @@ class TripsController < ApplicationController
     # trip_params.delete(:categories)
     @trip = Trip.new(trip_params.slice(:destination, :number_of_guests, :start_date, :end_date))
     @trip.creator = current_user
-        categories.each do |category|
-          activities = Activity.all.select do |activity|
-            category == activity.activity_type && @trip.destination == activity.location
-          end
-          activities = activities.uniq { |a| a.name }
-          @trip.activities << activities
+    if categories
+      categories.each do |category|
+        activities = Activity.all.select do |activity|
+          category == activity.activity_type && @trip.destination == activity.location
         end
-
-    if categories.size >= 4
+        activities = activities.uniq { |a| a.name }
+        @trip.activities << activities
+      end
+    end
+    if categories && categories.size >= 4
       @trip.save
       redirect_to trip_path(@trip)
     else
