@@ -1,24 +1,18 @@
 <% @trips.each do |trip|  %>
   <% if trip.start_date < Date.today  %>
-    <div class="card bg-light text-white me-5
-      <% case trip.destination %>
-        <% when "London" %>
-        <%= 'london-trip-card' %>
-        <% when "Paris" %>
-        <%= 'paris-trip-card' %>
-        <% when "Budapest" %>
-        <%= 'budapest-trip-card' %>
-        <% end %>"
+    <div  class="trip-card"
           data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="travel dates"
           data-bs-content="<%= trip.start_date.to_fs(:long_ordinal) %> to <%= trip.end_date.to_fs(:long_ordinal) %>"
           data-animation="">
-        <div class="card-img-overlay">
-          <div class="d-flex justify-content-between">
-            <h2 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><%= trip.destination %></h2>
-            <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-          </div>
-          <h5 class="card-text" id="header-dates" style="color: white;">D+<%= (Date.today - trip.end_date).to_i%></h5>
-        </div>
+    <% case trip.destination %>
+      <% when "London" %>
+        <a href="/trips/<%=trip.id%>"><%= image_tag("london.jpg")%></a>
+      <% when "Paris" %>
+        <a href="/trips/<%=trip.id%>"><%= image_tag("paris.jpg") %></a>
+      <% when "Budapest" %>
+        <a href="/trips/<%=trip.id%>"><%= image_tag("budapest.jpg")%></a>
+      <% end %>
+        <p id="trip-card"><%= trip.destination %></p>
     </div>
   <% end %>
 <% end %>

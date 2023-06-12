@@ -33,15 +33,15 @@
   color: white;
 }
 
-#landing-form button {
+#landing-btn {
   font-size: 20px;
   font-weight: 400;
   border: 2px solid $light-gray;
   background-color: $purple;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
-#landing-form button:hover {
+#landing-btn:hover {
   background-color: $light-gray;
   color: $purple;
 }

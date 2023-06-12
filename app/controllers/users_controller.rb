@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = current_user
-    @trips = current_user.trips.all
+    @trips = current_user.trips
     @trip = Trip.new
 
     @markers = @trips.geocoded.map do |trip|

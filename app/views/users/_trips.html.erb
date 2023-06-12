@@ -1,5 +1,4 @@
-
-<% @trips[0..3].each do |trip|  %>
+<% @trips.each do |trip|  %>
   <% if trip.start_date > Date.today  %>
     <div  class="trip-card"
           data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="Travel dates:"

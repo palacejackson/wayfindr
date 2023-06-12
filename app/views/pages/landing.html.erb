@@ -1,30 +1,50 @@
 
 <main>
-  <div  class="landing-info banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+  <div  class="landing-info banner-image w-100 vh-100 d-flex flex-column justify-content-center align-items-center"
         data-controller="landing-page">
 
     <div class="content text-center">
 
       <h3 id="head">Your dream holiday starts here</h3>
-      <p id="body">Find your way to the perfect trip</p>
+      <p id="body">Find your way to the perfect trip with <strong style="font-family: Raleway" >Wayfindr</strong></p>
         <% if current_user %>
           <form id="landing-form" name="landing-form">
             <button class="btn btn-purple p-3 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal" data-action="click->landing-page#submit"><strong>Show me the way</strong></button>
           </form>
         <% else %>
-          <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-primary' %>
+          <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-purple p-3', id: "landing-btn" %>
         <% end %>
+        <div id="down-arrow">
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+
     </div>
   </div>
 
 
-  <div class="container my-5 d-grid gap-5">
+
+
+  <div class="container header-info mt-5">
     <h2>How it works:</h2>
-    <p>Simply tell us you are headed, how long for and which activities take your fancy</p>
-    <p>Sit back and let us compile an itinerary for your trip</p>
-    <p>Customise your itinerary by selecting which activities you like to look of and which you want to swap</p>
+  </div>
+
+  <div class="container my-5 d-grid gap-5 cards">
+
+      <div class="card-info">
+        <strong><p class="info-header">Got a trip to Europe in the pipeline?</strong></p>
+        <p>Tell us where you are headed, how long for and which activities take your fancy</p>
+      </div>
+
+      <div class="card-info">
+        <strong><p class="info-header">Short on time to plan or simply have no idea where to start?</p></strong>
+        <p>Sit back and let Wayfindr create an itinerary for your trip in just a few seconds!</p>
+      </div>
+
+      <div class="card-info">
+        <strong><p class="info-header">Something doesn't take your fancy?</p></strong>
+        <p>Use our swap feature to customise your itinerary!</p>
+      </div>
+
   </div>
 
 </main>
-
-<%= render "/pages/modal"%>

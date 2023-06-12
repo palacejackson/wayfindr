@@ -4,7 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   scroll(e) {
-    console.log(this.element);
+    console.dir(this.element);
     if (e.currentTarget.pageYOffset >= 100) {
       this.element.classList.add("white-background")
       this.element.classList.remove("transparent")
