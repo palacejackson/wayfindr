@@ -30,7 +30,23 @@
             </div>
 
             <div class="activity-details">
-              <h6 class="lh-lg"><i class="fa-solid fa-landmark-flag"></i><strong> Category: </strong><%= activity.activity_type %></h6>
+              <h6 class="lh-lg"><strong>Category: </strong>
+              <% case activity.activity_type %>
+              <% when "Museums" %>
+                <i class="fa-solid fa-landmark"></i>
+              <% when "Parks" %>
+                <i class="fa-solid fa-tree"></i>
+              <% when "Sights" %>
+                <i class="fa-solid fa-binoculars"></i>
+              <% when "Restaurants" %>
+                <i class="fa-solid fa-utensils"></i>
+              <% when "walking+tours" %>
+                <i class="fa-solid fa-person-walking"></i>
+            <%# ADD EXTRA CATEGORIES HERE %>
+              <% end %>
+              </h6>
+
+
               <h6 class="lh-lg"><i class="fa-solid fa-map-location"></i><strong> Address: </strong><%= activity.address %></h6>
               <h6 class="lh-lg"><i class="fa-solid fa-location-dot"></i><strong> Location: </strong><%= activity.location %></h6>
               <h6 class="lh-lg"><i class="fa-solid fa-phone"></i><strong> Telephone number: </strong><%= activity.phone_number %></h6>
