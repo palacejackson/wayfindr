@@ -3,7 +3,7 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @trip_activities = @trip.activities_by_day
     @remaining_activities = @trip.remaining_activities
-    
+
     @activity_markers = @trip.activities.geocoded.map do |a|
       {
         lat: a.latitude,
@@ -37,12 +37,17 @@ class TripsController < ApplicationController
 
       @trip.num_days.times do |num|
         day = @trip.start_date + num.days
-        p day
+        used_types = []
         3.times do
           if @trip.remaining_activities.empty?
-            @trip.trip_activities.where(activity: @trip.remaining_activities.sample).first.update(day: day, locked: true)
+            TripActivity.create(activity: @trip.activities.sample, trip: @trip, day: day, locked: true)
           else
-            @trip.trip_activities.where(activity: @trip.activities.sample).first.update(day: day, locked: true)
+            trip_activity = @trip.trip_activities.where(activity: @trip.remaining_activities.filter { |a| !used_types.include?(a.activity_type)}.sample).first
+            unless trip_activity
+              trip_activity = @trip.trip_activities.where(activity: @trip.remaining_activities.sample).first
+            end
+            trip_activity.update(day: day, locked: true)
+            used_types << trip_activity.activity.activity_type
           end
         end
       end
