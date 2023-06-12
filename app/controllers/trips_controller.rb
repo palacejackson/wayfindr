@@ -16,6 +16,8 @@ class TripsController < ApplicationController
       end
       @trip_activities << activities
     end
+
+    @transparent = true
   end
 
   def new

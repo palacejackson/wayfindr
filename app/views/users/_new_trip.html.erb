@@ -1,8 +1,9 @@
-<div class="card bg-white text-white new-trip-card me-5">
-          <%= link_to root_path do %>
-          <div class="card-img-overlay" style="text-align: center;">
-            <h2 id="new-trip-header">Create a new trip</h2>
-            <i class="fa-solid fa-plus" style="color: #925CFF; font-size: 36px;"></i>
-          </div>
-          <% end %>
-</div>
+ <%= link_to root_path do %>
+
+  <div class="trip-card" id="new">
+      <div class="new-trip" >
+        <p id="new-trip">Create a new trip<br><i class="fa-solid fa-plus"></i> </p>
+      </div>
+  </div>
+
+  <% end %>

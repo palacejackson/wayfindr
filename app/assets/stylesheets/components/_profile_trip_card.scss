@@ -1,84 +1,132 @@
-.london-trip-card {
-  width: 250px;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background: url('https://media.istockphoto.com/id/1265900812/photo/aerial-view-of-london-and-the-tower-bridge.jpg?s=170667a&w=0&k=20&c=D1scasnEeMVME3qxfULPEhI92HfpRANoGduki12QnBw=');
-  background-position: center;
-  background-size: cover;
-
-  a {
-    color: white;
-  }
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 4px;
 }
 
-.paris-trip-card {
-  width: 250px;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background: url('https://i0.wp.com/www.theglitteringunknown.com/wp-content/uploads/2017/01/Sunset-from-top-of-Arc-close-up-The-Glittering-Unknown.jpg');
-  background-position: center;
-  background-size: cover;
-
-  a {
-    color: white;
-  }
+.trips-container {
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
 }
 
-.budapest-trip-card {
-  width: 250px;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background: url('https://media.timeout.com/images/105879336/750/422/image.jpg');
-  background-position: center;
-  background-size: cover;
-
-  a {
-    color: white;
-  }
+.upcoming-trips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.upcoming-header {
+.trip-card {
+  width: 300px;
+  height: 250px;
+  background-color: $light-gray;
   border-radius: 10px;
-  width: 407px;
-  padding: 13px;
   text-align: center;
-  background-color: #ebdff2;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+  }
+
+  #trip-card {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: $light-gray;
+    font-size: 2rem;
+    transition: 0.3s;
+  }
 }
 
-.new-trip-card {
-  width: 250px;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.trip-card:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+
+  #trip-card {
+    font-size: 36px;
+  }
 }
 
-#profile-header {
-  background-color: $purple;
-  font: $headers-font;
-}
 
-#trip-header {
-  color: $white;
-  font-weight: 400;
-  text-shadow: -1px 2px $purple;
-}
 
-#new-trip-header {
-  color: $purple;
-}
+// .paris-trip-card {
+//   width: 250px;
+//   height: 150px;
+//   border-radius: 10px;
+//   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//   background: url('https://i0.wp.com/www.theglitteringunknown.com/wp-content/uploads/2017/01/Sunset-from-top-of-Arc-close-up-The-Glittering-Unknown.jpg');
+//   background-position: center;
+//   background-size: cover;
 
-#header-dates {
-  margin-top: 63px;
-}
+//   a {
+//     color: white;
+//   }
+// }
 
-#icon-edit {
-  font-size: 28px;
-}
+// .budapest-trip-card {
+//   width: 250px;
+//   height: 150px;
+//   border-radius: 10px;
+//   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//   background: url('https://media.timeout.com/images/105879336/750/422/image.jpg');
+//   background-position: center;
+//   background-size: cover;
 
-#map-placeholder {
-  width: 400px;
-  height: 200px;
-}
+//   a {
+//     color: white;
+//   }
+// }
+
+// .upcoming-header {
+//   border-radius: 10px;
+//   width: 407px;
+//   padding: 13px;
+//   text-align: center;
+//   background-color: #ebdff2;
+// }
+
+// .new-trip-card {
+//   width: 250px;
+//   height: 150px;
+//   border-radius: 10px;
+//   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+// }
+
+// #profile-header {
+//   background-color: $purple;
+//   font: $headers-font;
+// }
+
+// #trip-header {
+//   color: $white;
+//   font-weight: 400;
+//   text-shadow: -1px 2px $purple;
+// }
+
+// #new-trip-header {
+//   color: $purple;
+// }
+
+// #header-dates {
+//   margin-top: 63px;
+// }
+
+// #icon-edit {
+//   font-size: 28px;
+// }
+
+// #map-placeholder {
+//   width: 400px;
+//   height: 200px;
+// }

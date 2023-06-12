@@ -1,12 +1,13 @@
 <%# Currently rendered in trips/index.html.erb %>
 
 <div class="activity-card-container d-flex justify-content-evenly">
+
   <% activities.each do |activity| %>
     <div class="card mt-4" style="width: 18rem;">
 
         <%# NEED TO ADD daytime? logic %>
         <%# <% if activity.daytime?%>
-          <i class="fa-solid fa-sun d-flex justify-content-end"></i>
+
         <%# <% else %>
           <%# <i class="fa-solid fa-moon"></i> %>
         <%# <% end %>
