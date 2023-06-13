@@ -1,8 +1,36 @@
-  <%# Whatsapp %>
-  <%= link_to "https://api.whatsapp.com/send?text=https://localhost:3000/#{controller_name}/#{@trip.id}" do %>
-    <i class="fa-brands fa-whatsapp fa-xl" style="color: #41cb1a;"></i>
-    <% end %>
-    <%# Twitter %>
-  <%= link_to "https://twitter.com/intent/tweet?text=https://localhost:3000/#{controller_name}/#{@trip.id}" do %>
-    <i class="fa-brands fa-square-twitter fa-xl" style="color: #0e63f6;"></i>
-    <% end %>
+<!-- Button trigger modal -->
+<button type="button" class="fa-solid fa-share align-self-right me-2" data-bs-toggle="modal" data-bs-target="#Modal-social-media">
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="Modal-social-media" tabindex="-1" aria-labelledby="modaltitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modaltitle">Modal title</h1>
+        <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
+      </div>
+      <div class="modal-body">
+          <%# Whatsapp %>
+          <div class="social-media"><%= link_to "https://api.whatsapp.com/send?text=Check out this trip to #{@trip.destination}. #{trip_url(@trip)}", target: :_blank do %>
+             <i class="fa-brands fa-whatsapp fa-lg" style="color: #41cb1a;"></i><p>Whatsapp</p>
+          <% end %>
+          </div>
+          <%# Twitter %>
+          <div class="social-media"><%=  link_to "https://twitter.com/intent/tweet?text=Check out this trip to #{@trip.destination}.&url=#{trip_url(@trip)}", target: :_blank do %>
+            <i class="fa-brands fa-square-twitter fa-lg" style="color: #0e63f6;"></i><p>Twitter</p>
+          <% end %>
+          </div>
+          <%# Facebook%>
+          <div class="social-media"><%= link_to "http://www.facebook.com/sharer.php?href=#{trip_url(@trip)}", title: "Check out this trip to #{@trip.destination}." do %>
+            <i class="fa-brands fa-facebook" style="color: #266de8;"></i><p>Facebook</p>
+          <% end %>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-purple" data-bs-dismiss="modal">Close</button>
+        <%# <button type="button" class="btn btn-primary">Save changes</button> %>
+      </div>
+    </div>
+  </div>
+</div>
