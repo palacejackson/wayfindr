@@ -27,8 +27,9 @@
 }
 
 .purple {
-  background-color: #552ea5 !important;
+  background-color: $purple !important;
   color: white !important;
+  // border: 0 !important;
 }
 
 .col-form-label{
