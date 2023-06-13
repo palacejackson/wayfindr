@@ -2,9 +2,9 @@
     <%# <% @islands.each do |island| %>
       <%# <a href="islands/<%=island.id" class='card'>  %>
 
-<div id="activity-card-carousel-<%=@carousel_id = @carousel += 1 %>" class="carousel slide">
+<div id="activity-card-carousel-<%=@carousel_id = @carousel += 1 %>" class="carousel slide banner">
 
-  <div class="carousel-inner card-img-top activity" id="small-carousel">
+  <div class="carousel-inner card-img-top" id="large-carousel">
 
     <% if activity.photos.length == 5 %>
       <div class="carousel-item active">
