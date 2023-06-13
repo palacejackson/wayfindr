@@ -7,8 +7,9 @@ class PagesController < ApplicationController
       category.name
     end
 
-    @skip_footer = true
+    # @skip_footer = true
     @transparent = true
     @landing_modal = true
+    @fixed = true
   end
 end

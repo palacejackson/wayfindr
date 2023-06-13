@@ -18,16 +18,14 @@
 
 <div class="container">
 
-
   <div class="profile-container my-5">
 
-    <div class="trips-container">
+    <div class="trips-container" style="margin-top: -16px;">
       <div>
         <h3 class="m-3">Your upcoming trips:</h3>
       </div>
       <div class="upcoming-trips">
         <%= render "trips", locals: {trips: @trips} %>
-        <%= render "new_trip" %>
       </div>
     </div>
 
@@ -39,7 +37,7 @@
       <div>
         <h3 class="m-3">Your past trips:</h3>
       </div>
-      <div class="upcoming-trips">
+      <div class="past-trips">
         <%= render "past_trips", locals: {trips: @trips} %>
       </div>
     </div>
