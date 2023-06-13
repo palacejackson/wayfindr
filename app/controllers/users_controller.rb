@@ -25,5 +25,6 @@ class UsersController < ApplicationController
         map_marker_html: render_to_string(partial: "trips/map_marker")
       }
     end
+    @categories = Category.pluck(:name)
   end
 end
