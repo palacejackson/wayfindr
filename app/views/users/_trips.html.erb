@@ -1,5 +1,5 @@
-<% @trips.each do |trip|  %>
-  <% if trip.start_date > Date.today  %>
+<% @trips.take(2).each do |trip|  %>
+  <% if trip.start_date > Date.today || trip.start_date == Date.today %>
     <div  class="trip-card"
           data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="Travel dates:"
           data-bs-content="<%= trip.start_date.to_fs(:long_ordinal) %> to <%= trip.end_date.to_fs(:long_ordinal) %>"
@@ -20,8 +20,6 @@
           <p class="fa-regular fa-trash-can"></p>
         <% end %>
       </div>
-
-
         </div>
   <% end %>
 <% end %>
