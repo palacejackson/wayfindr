@@ -12,57 +12,70 @@
   background: white;
 }
 
+.header-container {
+  min-height: 60%;
+  max-height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+#small-carousel {
+    min-height: 180px;
+    max-height: 180px;
+
+    img {
+      width: 100%;
+      object-fit: fill;
+    }
+  }
+
 .activity-title{
   font-size: 20px;
-  color: $custom-grey;
-  margin-top: 5px;
+  flex-grow: 1;
+  color: #6B7280;
+  max-height: 15%;
+  min-height: 15%;
+  line-height: 1;
 }
 
-.card-text{
+.activity-details-index {
+  flex-grow: 3;
   color: $custom-black;
+  max-height: 50%;
+  min-height: 50%;
+  padding-top: 3px;
 }
 
-.card-img-top{
-  opacity: 0.8;
-/*   z-index: 1; */
-  width: 100%;
-  object-fit: cover;
-  width: 100%;
-  height: 15vw;
+.activity-icon {
+    font-size: 20px;
+    color: $green-blue;
+    opacity: 0.8;
+    padding: 3px;
+  }
+
+.activity-icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2px;
 }
 
-.fa-sun{
-  position: absolute;
-  right: 0;
-  margin-top: 8px;
-  margin-right: 8px;
-  font-size: 28px;
-  color: $custom-black;
-  z-index: 2;
-}
-
-.fa-moon{
-  position: absolute;
-  right: 0;
-  margin-top: 8px;
-  margin-right: 8px;
-  font-size: 28px;
-  color: $custom-black;
-  z-index: 2;
+.button-and-swap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
 }
 
 #rotate-trip{
+  color: $custom-black;
   font-size: 25px;
   cursor: pointer;
-  position: absolute;
-  right: 6px;
-  bottom: 4px;
   opacity: 0.8;
 }
 
-.fa-rotate:hover{
-  color: black;
-  font-weight: bold;
+#rotate-trip:hover{
   opacity: 1;
 }
 
@@ -75,21 +88,6 @@
   color: black;
   font-weight: bold;
 }
-
-.activity-title{
-  color: #6B7280;
-}
-
-.activity-icon{
-/*  margin-left: 100px; */
-  position: absolute;
-  right: -6px;
-  margin-right: 10px;
-  font-size: 20px;
-  color: $purple;
-  top: 220px;
-}
-
 
 .tab-content{
   border: 1px solid #DEE2E6;

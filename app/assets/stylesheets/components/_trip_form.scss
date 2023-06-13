@@ -1,0 +1,39 @@
+.checkbox-item {
+  display: inline-block;
+}
+
+.inline-checkboxes {
+  position: absolute;
+  transform: scale(0);
+}
+
+.inline-checkboxes + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  // background-color: #ECEAFF;
+  color: $purple;
+  border: 1px solid #552ea5;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 15px !important;
+}
+
+
+.inline-checkboxes:active + label {
+  background-color: #552ea5;
+  color: white;
+}
+
+.purple {
+  background-color: $purple !important;
+  color: white !important;
+  border: $purple !important;
+}
+
+.col-form-label{
+  margin-top: 10px;
+  margin-bottom:13px;
+}

@@ -34,11 +34,13 @@ body {
   position: absolute;
   top: 85%;
   left: 47.5%;
+  transition: 0.3;
 
 }
 
 #down-arrow:hover {
   cursor: pointer;
+  font-size: 90px;
 }
 
 @media (min-width: 100px) and (max-width: 767px) {

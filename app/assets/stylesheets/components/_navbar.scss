@@ -25,16 +25,16 @@
   align-items: center;
 }
 
+.username-bold {
+  font-weight: 400;
+}
+
 .solid {
   background-color: $purple;
 
   .nav-link {
     color: $light-gray !important;
     font-size: 20px;
-
-    .username-bold {
-      font-weight: 400;
-    }
   }
 
   #navbar-wayfindr {

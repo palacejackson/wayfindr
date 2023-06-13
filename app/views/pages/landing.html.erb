@@ -1,16 +1,13 @@
 
 <main>
-  <div  class="landing-info banner-image w-100 vh-100 d-flex flex-column justify-content-center align-items-center"
-        data-controller="landing-page">
+  <div  class="landing-info banner-image w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
 
     <div class="content text-center">
 
       <h3 id="head">Your dream holiday starts here</h3>
       <p id="body">Find your way to the perfect trip with <strong style="font-family: Raleway" >Wayfindr</strong></p>
         <% if current_user %>
-          <form id="landing-form" name="landing-form">
-            <button class="btn btn-purple p-3 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal" data-action="click->landing-page#submit"><strong>Show me the way</strong></button>
-          </form>
+          <button class="btn btn-purple p-3 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal"><strong>Show me the way</strong></button>
         <% else %>
           <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-purple p-3', id: "landing-btn" %>
         <% end %>

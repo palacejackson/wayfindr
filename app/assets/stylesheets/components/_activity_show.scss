@@ -1,12 +1,11 @@
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 185px 0;
-  // width: 100%;
-  // height: 75%;
-  object-fit: cover;
-  opacity: 0.8;
+#large-carousel {
+  min-height: 350px;
+  max-height: 350px;
 
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .activity-name{
@@ -25,17 +24,52 @@
   margin-bottom: 10px;
 }
 
+.about-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .activity-details{
-  padding: 20px;
+  margin-top: 15px;
+  width: 100%;
+
+  .activity-show-text {
+    font-family: Raleway;
+
+  }
 }
 
-.rating{
-  margin-top: -32px;
-  margin-right: -55px;
+.category-activity-show {
+  display: flex;
+  flex-direction: row;
+
+  i {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+  }
+
+  .activity-icon {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
 }
 
-.ratings{
-  margin-left: 123px;
+.fa-circle-info {
+  font-size: 25px;
+  margin-right: 10px;
+  margin-bottom: 1px;
+}
+
+#rating {
+  display: flex;
+  flex-direction: row;
+}
+
+#description {
+  font-size: 18px;
 }
 
 .web-link{
@@ -46,13 +80,8 @@
   display: block;
   margin: auto;
   font-size: 15px;
-  border: 4px solid #925CFF;
   border-radius: 4px;
   width: 35px;
-}
-
-.btn-x:hover{
-  border: 4px solid #925CFF;
 }
 
 .itinerary{
@@ -65,6 +94,10 @@
 }
 
 // .show-angle-down{
-
 //   color: red;
+//   font-size: 50px;
+// }
+
+// .angle-down-icon{
+//   margin-bottom: 10px;
 // }
