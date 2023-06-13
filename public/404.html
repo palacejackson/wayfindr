@@ -4,14 +4,21 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
+    .error-photo {
+      background-image: url('app/assets/images/404.error.png');
+      height: max-content;
+    }
   </style>
 </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
   <div>
-
-
+    <div class="error-photo">
+      <div>
+        <img src="app/assets/images/404.error.png" alt="not showing">
+      </div>
+    </div>
   </div>
 </body>
 </html>
