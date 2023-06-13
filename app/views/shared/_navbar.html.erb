@@ -1,4 +1,5 @@
-<div  class="nav navbar <%= @transparent ? 'fixed-top' : 'static-top' %>  navbar-expand-sm navbar-lewagon p-md-3 <%= @transparent ? 'transparent' : 'solid' %>"
+<div  class="nav navbar <%= @fixed ? 'fixed-top' : 'static-top' %>  navbar-expand-sm navbar-lewagon p-md-3 <%= @transparent ? 'transparent' : 'solid' %>"
+      data-action="scroll@window->navbar#scroll"
       data-controller="navbar">
 
   <div class="container-fluid">
