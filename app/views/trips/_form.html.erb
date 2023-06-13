@@ -5,22 +5,28 @@
     <h3 class="p-3 text-center">Create  your trip</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" data-controller="purple-checkbox">
       <%= f.label :destination %>
-      <%=f.text_field :destination, style: 'text-transform: capitalize;', class:"form-control w-100 mt-2", data: { landing_page_target: :destination } %>
+      <%=f.text_field :destination, style: 'text-transform: capitalize;', class:"form-control w-100 mt-2", data: { landing_page_target: :destination }, placeholder: "Rome" %>
     <%# <%= f.input :destination %><br>
     <%= f.label :number_of_guests %>
     <%= f.input :number_of_guests, input_html: {class: "form-control mt-2 w-25"},class:"form-control", label: false, placeholder: "3", collection: [1,2,3,4,5,'6+'] %>
     <%= f.input :start_date,
               as: :string,
-              input_html: {data: {controller: "datepicker"}} %>
+              input_html: {class: "form-control w-50 mt-2", data: {controller: "datepicker"}}, placeholder: "01/07/2023" %>
     <%= f.input :end_date,
               as: :string,
-              input_html: {data: {controller: "datepicker"}} %>
-    <%= f.input :categories, as: :check_boxes, collection: @categories, include_hidden: false %>
+              input_html: {class: "form-control w-50 mt-2", data: {controller: "datepicker"}}, placeholder: "05/07/2023" %>
+
+    <%= f.input :categories, as: :check_boxes, label: 'Categories (select as many as you wish)',
+              label_html: {class: 'mt-5'},
+              input_html: {class: 'inline-checkboxes', data: { purple_checkbox_target: "checkboxes", action: "change->purple-checkbox#fire" }},
+              item_wrapper_class: 'checkbox-item',
+              collection: @categories%>
+
       </div>
       <div class="modal-footer">
-    <%= f.submit "Go to activities", class: "btn btn-primary m-3" %>
+    <%= f.submit "Generate itinerary", class: "btn btn-purple m-3" %>
         <button class="btn-purple d-none" data-bs-target="#selectActivitiesModal" data-bs-toggle="modal">Create my itinerary</button>
       </div>
   <% end  %>
