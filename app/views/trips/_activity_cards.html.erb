@@ -5,58 +5,6 @@ data-controller="activity-swap">
 
   <% activities.each do |activity| %>
 
-    <div class="card mt-4" style="width: 18rem;" data-activity-swap-target="activityCard" data-id="<%= activity.id %>">
-
-        <%# NEED TO ADD daytime? logic %>
-        <%# <% if activity.daytime?%>
-
-        <%# <% else %>
-          <%# <i class="fa-solid fa-moon"></i> %>
-        <%# <% end %>
-
-      <img src="https://images.unsplash.com/photo-1614354987493-a010f414d0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="activity-img">
-      <div class="card-body">
-        <div class="header-container d-flex justify-content-between">
-          <div class="activity-title"><%= activity.name %> </div>
-
-          <%# ACTIVITY CATEGORIES GO HERE %>
-          <% case activity.activity_type %>
-          <% when "Museums" %>
-            <div class="activity-icon"><i class="fa-solid fa-landmark"></i></div>
-          <% when "Parks" %>
-            <div class="activity-icon"><i class="fa-solid fa-tree"></i></div>
-          <% when "Sights" %>
-            <div class="activity-icon"><i class="fa-solid fa-binoculars"></i></div>
-          <% when "Restaurants" %>
-            <div class="activity-icon"><i class="fa-solid fa-utensils"></i></div>
-          <% when "walking+tours" %>
-            <div class="activity-icon"><i class="fa-solid fa-person-walking"></i></div>
-            <%# ADD EXTRA CATEGORIES HERE %>
-          <% end %>
-
-          <%# <div class="activity-icon"><i class="fa-solid fa-landmark"></i></div> %>
-        </div>
-        <p class="card-text mb-3"><%= activity.details %></p>
-        <div class="d-flex justify-content-start">
-          <%# MODAL BUTTON HERE %>
-          <button type="button" class="btn btn-purple btn-sm more-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%= activity.id%>">
-            More info
-          </button>
-          <%= render 'activities/activity_show', activity: activity %>
-        </div>
-        <%# MODAL ENDS ABOVE %>
-        <div class="features d-flex justify-content-end">
-          <i class="fa-solid fa-rotate"
-          id="rotate-trip"
-          data-activity-swap-target="swapButton"
-          data-action="click->activity-swap#swap"
-          data-id="<%= activity.id %>"
-          ></i>
-          <%# <i class="fa-regular fa-bookmark card-bookmark"></i> %>
-        </div>
-      </div>
-    </div>
-
     <%= render "/trip_activity/trip_activity", activity: activity %>
 
   <% end %>
