@@ -2,26 +2,19 @@
   background-color:$purple;
   color: white;
   border-radius: 6px;
+
+  .more-info {
+    // position: absolute;
+    // bottom: 0;
+    padding: 5px;
+    // margin-bottom: 12px;
+  }
 }
 
 .btn-purple:hover{
   border: 2px solid $purple;
   color: black;
 }
-
-// .btn-purple-landing{
-//   background-color:$purple;
-//   color: white;
-//   font-weight: bold;
-// }
-
-
-// .btn-purple-landing:hover{
-//   // border: 2px solid $purple;
-//   color: white;
-//   // font-weight: bold;
-//   background-color:$purple;
-// }
 
 .btn-purple-border{
   border: 2px solid $purple;
@@ -43,11 +36,4 @@
 #landing-btn:hover {
   background-color: $light-gray;
   color: $purple;
-}
-
-.more-info{
-  // position: absolute;
-  // bottom: 0;
-  left: 14px;
-  // margin-bottom: 12px;
 }
