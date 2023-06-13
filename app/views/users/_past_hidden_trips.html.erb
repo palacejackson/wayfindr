@@ -1,0 +1,25 @@
+<% @past_hidden_trips.each do |trip| %>
+  <div  class="trip-card d-none"
+        data-hidden-past-trips-target="hidden"
+        id="past-hidden-trips"
+            data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="Travel dates:"
+            data-bs-content="<%= trip.start_date.to_fs(:long_ordinal) %> to <%= trip.end_date.to_fs(:long_ordinal) %>"
+            data-animation="">
+        <% case trip.destination %>
+          <% when "London" %>
+            <a href="/trips/<%=trip.id%>"><%= image_tag("london.jpg")%></a>
+          <% when "Paris" %>
+            <a href="/trips/<%=trip.id%>"><%= image_tag("paris.jpg") %></a>
+          <% when "Budapest" %>
+            <a href="/trips/<%=trip.id%>"><%= image_tag("budapest.jpg") %></a>
+        <% end %>
+
+
+        <div id="trip-card-info">
+          <%= trip.destination %>
+          <%= link_to trip_path(trip), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete your trip to #{@trip.destination}?"} do %>
+            <p class="fa-regular fa-trash-can"></p>
+          <% end %>
+        </div>
+  </div>
+<% end %>

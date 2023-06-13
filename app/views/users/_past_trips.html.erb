@@ -24,4 +24,8 @@
       </div>
         </div>
   <% end %>
+
+  <% if !(@past_hidden_trips.empty?) %>
+      <%= render "past_hidden_trips" %>
+  <% end %>
   <% end %>

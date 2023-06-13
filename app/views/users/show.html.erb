@@ -33,9 +33,9 @@
 
     <div class="profile-container my-5">
 
-    <div class="trips-container">
+    <div class="trips-container" data-controller="hidden-past-trips">
       <div>
-        <h3 class="m-3">Your past trips:</h3>
+        <h3 class="m-3">Your past trips:</h3> <button class="btn btn-purple p-1 m-2" data-action="click->hidden-past-trips#showHiddenTrips" data-hidden-past-trips-target="button">See all past trips</button>
       </div>
       <div class="past-trips">
         <%= render "past_trips", locals: {trips: @trips} %>
