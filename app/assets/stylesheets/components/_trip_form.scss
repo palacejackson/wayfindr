@@ -29,7 +29,7 @@
 .purple {
   background-color: $purple !important;
   color: white !important;
-  // border: 0 !important;
+  border: $purple !important;
 }
 
 .col-form-label{
