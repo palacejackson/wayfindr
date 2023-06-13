@@ -1,5 +1,5 @@
 <% if @past_trips.empty? %>
-  <%= render "no_trips_card" %>
+  <%= render "no_past_trips" %>
   <% else %>
 <% @past_trips.each do |trip|  %>
     <div  class="trip-card"
