@@ -1,0 +1,33 @@
+.title-index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+}
+
+#itinerary {
+  color: $custom-black !important;
+  opacity: 0.8;
+}
+
+.title-index-header {
+  margin-left: 10px;
+}
+
+.share-icon {
+  margin-right: 10px;
+}
+
+.share-icon i {
+  cursor: pointer;
+  color: $custom-black;
+  font-size: 40px;
+  opacity: 0.8;
+  // display: flex;
+  // align-items: center;
+}

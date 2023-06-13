@@ -6,15 +6,12 @@ export default class extends Controller {
     window.scrollTo(0, 0);
   }
 
-
   scroll(e) {
     console.dir(this.element);
-    if (e.currentTarget.pageYOffset >= 100) {
-      this.element.classList.add("white-background")
-      this.element.classList.remove("transparent")
+    if (e.currentTarget.pageYOffset >= 150) {
+      this.element.classList.add("d-none")
     } else {
-      this.element.classList.add("transparent")
-      this.element.classList.remove("white-background")
+      this.element.classList.remove("d-none")
     }
 
   }
