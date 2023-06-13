@@ -8,7 +8,7 @@ class TripActivitiesController < ApplicationController
     # TODO: put this in an if statement
     @trip_activity.update(activity: @new_activity)
     respond_to do |format|
-      format.html { redirect_to trip_path(@trip) }
+      format.html { redirect_to trip_path(@trip), notice: "new activity generated" }
       format.json
     end
   end

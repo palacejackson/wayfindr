@@ -15,7 +15,14 @@
 
 .upcoming-trips {
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.past-trips {
+  display: flex;
+  flex-direction: row !important;
   justify-content: space-around;
   flex-wrap: wrap;
 }
