@@ -20,7 +20,5 @@ export default class extends Controller {
         form.requestSubmit();
       }
     })
-    // fetch({
-    // })
   }
 }
