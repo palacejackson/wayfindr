@@ -9,7 +9,7 @@ class TripsController < ApplicationController
       {
         lat: a.latitude,
         lng: a.longitude,
-        activitymap_info_html: render_to_string(partial: "activitymap_info", locals: { activity: a }),
+        info_window_html: render_to_string(partial: "activitymap_info", locals: { activity: a }),
         map_marker_html: render_to_string(partial: "map_marker")
       }
     end

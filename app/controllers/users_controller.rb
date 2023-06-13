@@ -20,7 +20,9 @@ class UsersController < ApplicationController
     @markers = @trips.geocoded.map do |trip|
       {
         lat: trip.latitude,
-        lng: trip.longitude
+        lng: trip.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { trip: trip }),
+        map_marker_html: render_to_string(partial: "trips/map_marker")
       }
     end
   end
