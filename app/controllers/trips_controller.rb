@@ -15,6 +15,7 @@ class TripsController < ApplicationController
     end
 
     @transparent = true
+    @fixed = true
   end
 
   def new

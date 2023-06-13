@@ -3,8 +3,12 @@
 <div class="activity-card-container d-flex justify-content-evenly"
 data-controller="activity-swap">
 
+  <% @carousel = 0 %>
+
   <% activities.each do |activity| %>
+
     <%= render "/trip_activity/trip_activity", activity: activity %>
+
   <% end %>
 
 
