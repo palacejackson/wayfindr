@@ -18,7 +18,7 @@
               as: :string,
               input_html: {class: "form-control w-50 mt-2", data: {controller: "datepicker"}}, placeholder: "05/07/2023" %>
 
-    <%= f.input :categories, as: :check_boxes, label: 'Categories' ' (select as many as you wish)',
+    <%= f.input :categories, as: :check_boxes, label: 'Categories' ' (Please select at least 4)',
               label_html: {class: 'mt-5'},
               input_html: {class: 'inline-checkboxes', data: { purple_checkbox_target: "checkboxes", action: "change->purple-checkbox#fire" }},
               item_wrapper_class: 'checkbox-item',
