@@ -24,7 +24,9 @@
         <% end %>
       </div>
         </div>
-        <%= render "new_trip" %>
 
     <% end %>
+    <% if !(@upcoming_hidden_trips.empty?) %>
+      <%= render "upcoming_hidden_trips" %>
+  <% end %>
   <% end %>
