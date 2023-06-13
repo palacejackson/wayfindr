@@ -31,10 +31,7 @@ export default class extends Controller {
 
   #addActivityMarkersToMap(activityMarkers) {
     activityMarkers.forEach((marker) => {
-      // console.log(marker);
-      // console.log(marker.activitymap_info_html)
-      const popup = new mapboxgl.Popup().setHTML(marker.activitymap_info_html)
-
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
       const customMarker = document.createElement("div")
       customMarker.className = 'marker'
       customMarker.innerHTML = marker.map_marker_html
