@@ -4,11 +4,22 @@
   border-radius: 6px;
 
   .more-info {
-    // position: absolute;
-    // bottom: 0;
     padding: 5px;
-    // margin-bottom: 12px;
   }
+}
+
+.btn-green {
+  background-color:$green-blue;
+  color: $custom-black;
+  border-radius: 6px;
+  transition: 0.3;
+  opacity: 0.8;
+}
+
+.btn-green:hover {
+  background-color:$green-blue;
+  opacity: 0.4;
+  cursor: pointer;
 }
 
 .btn-purple:hover{

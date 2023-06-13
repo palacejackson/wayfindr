@@ -13,6 +13,12 @@
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
 }
 
+.see-all-trips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .upcoming-trips {
   display: flex;
   flex-direction: row !important;

@@ -21,8 +21,9 @@
   <div class="profile-container my-5">
 
     <div class="trips-container" style="margin-top: -16px;" data-controller="hidden-upcoming-trips">
-      <div>
-        <h3 class="m-3">Your upcoming trips:</h3> <button class="btn btn-purple p-1 m-2" data-action="click->hidden-upcoming-trips#showHiddenTrips" data-hidden-upcoming-trips-target="button">See all upcoming trips</button>
+      <div class="see-all-trips m-2">
+        <h3 class="m-3">Your upcoming trips:</h3>
+        <button class="btn btn-green see-all" data-action="click->hidden-upcoming-trips#showHiddenTrips" data-hidden-upcoming-trips-target="button">See all</button>
       </div>
       <div class="upcoming-trips">
         <%= render "trips", locals: {trips: @trips} %>
@@ -35,8 +36,9 @@
     <div class="profile-container my-5">
 
     <div class="trips-container" data-controller="hidden-past-trips">
-      <div>
-        <h3 class="m-3">Your past trips:</h3> <button class="btn btn-purple p-1 m-2" data-action="click->hidden-past-trips#showHiddenTrips" data-hidden-past-trips-target="button">See all past trips</button>
+      <div class="see-all-trips m-2">
+        <h3 class="m-3">Your past trips:</h3>
+        <button class="btn btn-green see-all" data-action="click->hidden-past-trips#showHiddenTrips" data-hidden-past-trips-target="button">See all</button>
       </div>
       <div class="past-trips">
         <%= render "past_trips", locals: {trips: @trips} %>
