@@ -65,7 +65,7 @@ class TripsController < ApplicationController
         category.name
       end
       # render :template => "trips/_form", status: :unprocessable_entity
-      render 'pages/landing', status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
