@@ -13,7 +13,7 @@
       <h2 id="itinerary">Your <%=@trip.num_days %> day itinerary</h2>
     </div>
     <div id="share-icon">
-      <i class="fa-solid fa-share"></i>
+      <i class="fa-solid fa-share align-self-right me-2" data-bs-toggle="modal" data-bs-target="#Modal-social-media"></i>
     </div>
 
   </div>
@@ -54,3 +54,5 @@
 </div>
 
 </div>
+
+ <%= render "share_social_media" %>

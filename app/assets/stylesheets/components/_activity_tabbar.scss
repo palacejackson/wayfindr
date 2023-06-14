@@ -1,12 +1,12 @@
 #nav-home-tab{
   color: black;
-  background: white;
+  background: $custom-white;
 }
 
 .nav-link-tab{
   width: 200px;
   font-style: bold;
-  color: white !important;
+  color: $custom-white !important;
   background: $purple !important;
   opacity: 0.7 !important;
 }
@@ -23,7 +23,7 @@
 
 #nav-profile-tab{
   color: black;
-  background: white;
+  background: $custom-white;
 }
 
 /* #nav-contact{
@@ -32,7 +32,7 @@
 
 #nav-contact-tab{
   color: black;
-  background: white;
+  background: $custom-white;
 }
 
 

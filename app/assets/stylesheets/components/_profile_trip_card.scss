@@ -33,6 +33,15 @@
   flex-wrap: wrap;
 }
 
+
+#new.trip-card {
+  background-color: rgba(146, 92, 255, 0.2);
+   p {
+    color: $custom-black;
+    line-height: 1.2;
+   }
+}
+
 .trip-card {
   width: 300px;
   height: 250px;
@@ -45,6 +54,7 @@
   transition: 0.3s;
   display: flex;
   justify-content: center;
+
 
   img {
     width: 100%;
@@ -77,7 +87,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
 
   #trip-card-info {
-    font-size: 3rem;
+    font-size: 46px;
   }
 }
 

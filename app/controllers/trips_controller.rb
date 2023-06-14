@@ -19,6 +19,10 @@ class TripsController < ApplicationController
   end
 
   def new
+    @trip = Trip.new
+    @categories = Category.pluck(:name)
+    @transparent = true
+    @fixed = true
   end
 
   def create

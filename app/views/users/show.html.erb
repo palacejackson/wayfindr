@@ -4,7 +4,7 @@
     <div><%= image_tag "avatar3.png", class: "avatar-large", alt: "dropdown menu" %> </div>
 
     <div class="user-info px-3">
-      <h1>Hello <%= @user.username%></h1>
+      <div class="hello-username"><h2>Hello&nbsp</h2> <h2><strong><%= @user.username %></strong></h2></div>
       <p class="my-1"><%= @user.first_name.capitalize%> <%= @user.last_name.capitalize %></p>
       <p><%= @user.email %></p>
     </div>
@@ -21,9 +21,9 @@
   <div class="profile-container my-5">
 
     <div class="trips-container" style="margin-top: -16px;" data-controller="hidden-upcoming-trips">
-      <div class="see-all-trips m-2">
-        <h3 class="m-3">Your upcoming trips:</h3>
-        <button class="btn btn-green see-all" data-action="click->hidden-upcoming-trips#showHiddenTrips" data-hidden-upcoming-trips-target="button">See all</button>
+      <div class="see-all-trips m-3">
+        <h3>Your upcoming trips:</h3>
+        <button class="btn btn-grey see-all" data-action="click->hidden-upcoming-trips#showHiddenTrips" data-hidden-upcoming-trips-target="button">See all</button>
       </div>
       <div class="upcoming-trips">
         <%= render "trips", locals: {trips: @trips} %>
@@ -36,9 +36,9 @@
     <div class="profile-container my-5">
 
     <div class="trips-container" data-controller="hidden-past-trips">
-      <div class="see-all-trips m-2">
-        <h3 class="m-3">Your past trips:</h3>
-        <button class="btn btn-green see-all" data-action="click->hidden-past-trips#showHiddenTrips" data-hidden-past-trips-target="button">See all</button>
+      <div class="see-all-trips m-3">
+        <h3>Your past trips:</h3>
+        <button class="btn btn-grey see-all" data-action="click->hidden-past-trips#showHiddenTrips" data-hidden-past-trips-target="button">See all</button>
       </div>
       <div class="past-trips">
         <%= render "past_trips", locals: {trips: @trips} %>
