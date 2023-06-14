@@ -1,25 +1,32 @@
 .btn-purple{
-  background-color:$purple;
-  color: white;
+  background-color: $purple;
+  color: $custom-white;
   border-radius: 6px;
+  opacity: 0.9;
 
   .more-info {
     padding: 5px;
   }
 }
 
-.btn-green {
-  background-color:$green-blue;
-  color: $custom-black;
+.btn-grey {
+  background-color: #ADAFAC;
   border-radius: 6px;
   transition: 0.3;
-  opacity: 0.8;
+  opacity: 0.7;
+
+  p { color: $custom-black;
+  }
 }
 
-.btn-green:hover {
+.btn-grey:hover {
   background-color:$green-blue;
   opacity: 0.4;
   cursor: pointer;
+
+  p {
+    color: $custom-black;
+  }
 }
 
 .btn-purple:hover{

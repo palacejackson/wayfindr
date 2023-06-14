@@ -1,6 +1,6 @@
 .card{
   margin-left: 40px;
-  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 2px 2px 6px;
   margin-top: 40px !important;
   // just added to cards
   height: 440px;
@@ -23,8 +23,9 @@
     min-height: 180px;
     max-height: 180px;
 
-    img {
+    .d-block {
       width: 100%;
+      height: 180px;
       object-fit: fill;
     }
   }
@@ -32,7 +33,7 @@
 .activity-title{
   font-size: 20px;
   flex-grow: 1;
-  color: #6B7280;
+  color: $custom-black;
   max-height: 15%;
   min-height: 15%;
   line-height: 1;
@@ -41,6 +42,7 @@
 .activity-details-index {
   flex-grow: 3;
   color: $custom-black;
+  opacity: 0.8;
   max-height: 50%;
   min-height: 50%;
   padding-top: 3px;
@@ -69,7 +71,7 @@
 }
 
 #rotate-trip{
-  color: $custom-black;
+  color: $purple;
   font-size: 25px;
   cursor: pointer;
   opacity: 0.8;
