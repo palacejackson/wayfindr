@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+
+  p {
+    transition: 0.3s
+  }
 }
 
 
@@ -17,7 +21,7 @@
 
 #new:hover {
 
-  #new-trip {
-  font-size: 36px;
+  p {
+  font-size: 38px;
   }
 }
