@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         lat: trip.latitude,
         lng: trip.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: { trip: trip }),
-        map_marker_html: render_to_string(partial: "marker")
+        map_marker_html: render_to_string(partial: "trips/marker")
       }
     end
     @categories = Category.pluck(:name)
