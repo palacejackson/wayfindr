@@ -22,16 +22,16 @@
   background-color:$custom-grey;
   border-radius: 6px;
   transition: all .2s ease-in-out;
-  opacity: 0.8;
-  color: $custom-black;
+  opacity: 1;
+  color: $custom-white;
 }
 
 .btn-grey:hover {
-  background-color:$custom-grey;
-  opacity: 0.8;
+  background-color: $custom-grey;
+  opacity: 1;
   cursor: pointer;
   transform: scale(1.1);
-  color: $custom-black;
+  color: $custom-white;
 
 }
 
@@ -41,10 +41,11 @@
   border-radius: 6px;
 }
 
-.btn-purple-border:hover{
+.btn-white:hover{
   // border: 2px solid $purple;
   border: 2px solid $purple;
   transform: scale(1.1);
+  border-radius: 6px;
 }
 
 #landing-btn {
