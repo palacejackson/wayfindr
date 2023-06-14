@@ -1,0 +1,5 @@
+meta_name: "Wayfindr"
+meta_title: "Wayfindr - Find your way to the perfect trip"
+meta_description: "Wayfindr is a trip itinerary generator for those needing to plan their European city breaks!"
+meta_image: "wayfindr_cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@your_twitter_account"
