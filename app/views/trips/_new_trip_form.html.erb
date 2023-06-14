@@ -1,4 +1,4 @@
-  <%= simple_form_for(@trip) do |f| %>
+  <%= simple_form_for(@trip) do |f|%>
         <%# <h1 class=" modal-title fs-5 " id="modalToggleLabel">Create your trip</h1> %>
       <div class="form-header">
         <h3 class="py-3 trip-form-header">Create your trip</h3>
@@ -29,14 +29,16 @@
               collection: @categories%>
 
       </div>
-
       <div class="modal-footer">
-    <%= f.submit "Generate itinerary", class: "btn btn-purple m-3" %>
-        <button class="btn-purple d-none" data-bs-target="#selectActivitiesModal" data-bs-toggle="modal">Create my itinerary</button>
+        <%= f.submit "Generate itinerary", data: {action: 'click->trip-loading#submit'}, class: "btn btn-purple m-3" %>
+
+        <button id="generateBtn" class="btn-purple d-none" data-bs-target="#selectActivitiesModal" data-bs-toggle="modal">Create my itinerary</button>
+
         <div id="alertContainer">
-          <div id="generateBtn" class="alert alert-light d-none" role="alert">
-            Generating itinerary...
+          <div class="alert alert-light d-none" role="alert">
+          Generating itinerary...
           </div>
         </div>
+
       </div>
   <% end  %>
