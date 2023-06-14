@@ -14,11 +14,11 @@ export default class extends Controller {
       target.classList.toggle("d-none");
     });
     console.dir(this.buttonTarget)
-    if (this.buttonTarget.innerHTML === "See all past trips") {
+    if (this.buttonTarget.innerHTML === "See all") {
        this.buttonTarget.innerHTML = "See less"
        window.scrollTo(0,750);
       } else {
-        this.buttonTarget.innerHTML = "See all past trips";
+        this.buttonTarget.innerHTML = "See all";
       };
   }
 }
