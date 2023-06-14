@@ -7,7 +7,8 @@
       <h3 id="head">Your dream holiday starts here</h3>
       <p id="body">Find your way to the perfect trip with <strong style="font-family: Raleway" >Wayfindr</strong></p>
         <% if current_user %>
-          <button class="btn btn-purple p-3 m-1" id="landing-btn" data-bs-target="#createTripModal" data-bs-toggle="modal"><strong>Show me the way</strong></button>
+          <%= link_to 'Show me the way', new_trip_path, class: "btn btn-purple p-3 m-1", id: "landing-btn" %>
+          <%# <button class="btn btn-purple p-3 m-1"  data-bs-target="#createTripModal" data-bs-toggle="modal"><strong>Show me the way</strong></button> %>
         <% else %>
           <%= link_to 'Log in to see the way', new_user_session_path, class: 'btn btn-purple p-3', id: "landing-btn" %>
         <% end %>
@@ -52,6 +53,4 @@
     </div>
 
   </div>
-
-<%= render "/pages/modal"%>
 </main>

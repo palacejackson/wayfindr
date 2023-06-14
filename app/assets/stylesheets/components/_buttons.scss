@@ -1,40 +1,50 @@
 .btn-purple{
-  background-color:$purple;
-  color: white;
+  background-color: $purple;
+  color: $custom-white;
   border-radius: 6px;
+  opacity: 0.9;
+  transition: all .2s ease-in-out;
+
 
   .more-info {
     padding: 5px;
   }
 }
 
-.btn-green {
-  background-color:$green-blue;
-  color: $custom-black;
-  border-radius: 6px;
-  transition: 0.3;
-  opacity: 0.8;
-}
-
-.btn-green:hover {
-  background-color:$green-blue;
-  opacity: 0.4;
-  cursor: pointer;
-}
-
 .btn-purple:hover{
-  border: 2px solid $purple;
-  color: black;
+  background-color: $purple;
+  color: $custom-white;
+  transform: scale(1.1);
+  color: $custom-white;
 }
 
-.btn-purple-border{
+.btn-grey {
+  background-color:$custom-grey;
+  border-radius: 6px;
+  transition: all .2s ease-in-out;
+  opacity: 0.8;
+  color: $custom-black;
+}
+
+.btn-grey:hover {
+  background-color:$custom-grey;
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(1.1);
+  color: $custom-black;
+
+}
+
+.btn-white{
   border: 2px solid $purple;
+  transition: all .2s ease-in-out;
+  border-radius: 6px;
 }
 
 .btn-purple-border:hover{
   // border: 2px solid $purple;
-  background-color: $purple;
-  color: white;
+  border: 2px solid $purple;
+  transform: scale(1.1);
 }
 
 #landing-btn {
@@ -42,9 +52,11 @@
   font-weight: 400;
   border: 2px solid $light-gray;
   background-color: $purple;
+  opacity: 1;
 }
 
 #landing-btn:hover {
   background-color: $light-gray;
   color: $purple;
+  opacity: 1;
 }

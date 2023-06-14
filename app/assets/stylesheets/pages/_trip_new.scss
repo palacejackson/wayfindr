@@ -1,0 +1,16 @@
+
+.new-trip-container {
+  position: relative;
+  margin: auto;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  width: 30%;
+  padding: 15px;
+}
+
+
+.banner-image-new-trip {
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("new_trip.jpg");
+  background-size: cover;
+}
