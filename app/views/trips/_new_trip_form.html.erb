@@ -22,6 +22,7 @@
                     input_html: {class: "form-control w-50", data: {controller: "datepicker"}}, placeholder: "05/07/2023" %>
       </div>
     </div>
+
     <%= f.input :categories, as: :check_boxes, label: 'Categories' ' (Please select at least 4)',
               label_html: {class: 'mt-5'},
               input_html: {class: 'inline-checkboxes', data: { purple_checkbox_target: "checkboxes", action: "change->purple-checkbox#fire" }},
@@ -29,10 +30,11 @@
               collection: @categories%>
 
       </div>
+
       <div class="modal-footer">
         <%= f.submit "Generate itinerary", data: {action: 'click->trip-loading#submit'}, class: "btn btn-purple m-3" %>
 
-        <button id="generateBtn" class="btn-purple d-none" data-bs-target="#selectActivitiesModal" data-bs-toggle="modal">Create my itinerary</button>
+        <%# <button id="generateBtn" class="btn-purple d-none" data-bs-target="#selectActivitiesModal" data-bs-toggle="modal">Create my itinerary</button> %>
 
         <div id="alertContainer">
           <div class="alert alert-light d-none" role="alert">
