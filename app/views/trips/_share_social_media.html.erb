@@ -7,23 +7,23 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modaltitle">Modal title</h1>
+        <h1 class="modal-title fs-5" id="modaltitle" style="margin-left: 161px;">Share your trip!</h1>
         <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
       </div>
-      <div class="modal-body">
+      <div class="modal-body d-flex" style="justify-content: space-between; margin-left: 42px; margin-right: 42px; padding: 29px;">
           <%# Whatsapp %>
-          <div class="social-media"><%= link_to "https://api.whatsapp.com/send?text=Check out this trip to #{@trip.destination}. #{trip_url(@trip)}", target: :_blank do %>
-             <i class="fa-brands fa-whatsapp fa-lg" style="color: #41cb1a;"></i><p>Whatsapp</p>
+          <div class="social-media"><%= link_to "https://api.whatsapp.com/send?text=Check out this trip to #{@trip.destination}. #{trip_url(@trip)}", target: "_blank" do %>
+             <i class="fa-brands fa-whatsapp fa-lg" style="color: #41cb1a; font-size: 56px; margin-top: 19px;" id="icon"></i>
           <% end %>
           </div>
           <%# Twitter %>
-          <div class="social-media"><%=  link_to "https://twitter.com/intent/tweet?text=Check out this trip to #{@trip.destination}.&url=#{trip_url(@trip)}", target: :_blank do %>
-            <i class="fa-brands fa-square-twitter fa-lg" style="color: #0e63f6;"></i><p>Twitter</p>
+          <div class="social-media"><%=  link_to "https://twitter.com/intent/tweet?text=Check out this trip to #{@trip.destination}.&url=#{trip_url(@trip)}", target: "_blank" do %>
+            <i class="fa-brands fa-square-twitter fa-lg" style="color: #0e63f6; margin-top: 21px; font-size: 51px;" id="icon"></i>
           <% end %>
           </div>
           <%# Facebook%>
-          <div class="social-media"><%= link_to "http://www.facebook.com/sharer.php?href=#{trip_url(@trip)}", title: "Check out this trip to #{@trip.destination}." do %>
-            <i class="fa-brands fa-facebook" style="color: #266de8;"></i><p>Facebook</p>
+          <div class="social-media"><%= link_to "http://www.facebook.com/sharer.php?href=#{trip_url(@trip)}", title: "Check out this trip to #{@trip.destination}", target: "_blank" do %>
+            <i class="fa-brands fa-facebook" style="color: #266de8; font-size: 51px; margin-top: -3px;" id="icon"></i>
           <% end %>
           </div>
       </div>

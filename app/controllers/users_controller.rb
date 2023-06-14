@@ -6,13 +6,13 @@ class UsersController < ApplicationController
 
     @past_trips = []
     @trips.each do |trip|
-      @past_trips << trip if trip.start_date < Date.today && trip.user_id == current_user.id
+      @past_trips << trip if trip.start_date < Date.today
     end
     @past_hidden_trips = @past_trips.drop(4)
 
     @upcoming_trips = []
     @trips.each do |trip|
-      @upcoming_trips << trip if (trip.start_date > Date.today || trip.start_date == Date.today) && trip.user_id == current_user.id
+      @upcoming_trips << trip if trip.start_date > Date.today || trip.start_date == Date.today
     end
 
     @upcoming_hidden_trips = @upcoming_trips.drop(3)
@@ -22,8 +22,9 @@ class UsersController < ApplicationController
         lat: trip.latitude,
         lng: trip.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: { trip: trip }),
-        map_marker_html: render_to_string(partial: "trips/map_marker")
+        map_marker_html: render_to_string(partial: "marker")
       }
     end
+    @categories = Category.pluck(:name)
   end
 end

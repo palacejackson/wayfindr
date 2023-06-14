@@ -10,7 +10,7 @@ class TripsController < ApplicationController
         lat: a.latitude,
         lng: a.longitude,
         info_window_html: render_to_string(partial: "activitymap_info", locals: { activity: a }),
-        map_marker_html: render_to_string(partial: "map_marker")
+        map_marker_html: render_to_string(partial: "marker")
       }
     end
 
@@ -19,6 +19,10 @@ class TripsController < ApplicationController
   end
 
   def new
+    @trip = Trip.new
+    @categories = Category.pluck(:name)
+    @transparent = true
+    @fixed = true
   end
 
   def create
@@ -61,7 +65,7 @@ class TripsController < ApplicationController
         category.name
       end
       # render :template => "trips/_form", status: :unprocessable_entity
-      render 'pages/landing', status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 

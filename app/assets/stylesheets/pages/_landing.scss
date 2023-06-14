@@ -7,7 +7,7 @@ body {
 }
 
 .banner-image {
-  background-image: url("paris.jpeg");
+  background-image: linear-gradient(rgba(185, 184, 184, 0.3),rgba(0,0,0,0.2)), url("paris.jpeg");
   background-size: cover;
 }
 
@@ -34,13 +34,13 @@ body {
   position: absolute;
   top: 85%;
   left: 47.5%;
-  transition: 0.3;
+  transition: all .2s ease-in-out;
 
 }
 
 #down-arrow:hover {
   cursor: pointer;
-  font-size: 90px;
+  transform: scale(1.1);
 }
 
 @media (min-width: 100px) and (max-width: 767px) {

@@ -1,9 +1,9 @@
- <%= link_to root_path do %>
+
 
   <div class="trip-card" id="new">
       <div class="new-trip" >
-        <p id="new-trip">Create a new trip<br><i class="fa-solid fa-plus"></i> </p>
+        <a id="new-trip" data-bs-target="#createTripModal" data-bs-toggle="modal"><p><br>NEW TRIP<br>+</p> </a>
       </div>
   </div>
 
-  <% end %>
+<%= render "/trips/modal"%>
