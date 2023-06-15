@@ -2,7 +2,7 @@
   <%= simple_form_for(@trip) do |f| %>
         <%# <h1 class=" modal-title fs-5 " id="modalToggleLabel">Create your trip</h1> %>
       <div class="modal-header">
-    <h3 class="p-3 text-center">Create your trip</h3>
+    <h3 class="p-3 text-center">Plan your trip</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" data-controller="purple-checkbox">
@@ -13,10 +13,10 @@
     <%= f.input :number_of_guests, input_html: {class: "form-control mt-2 w-25"},class:"form-control", label: false, prompt: "0", collection: [1,2,3,4,5,'6+'] %>
     <%= f.input :start_date,
               as: :string,
-              input_html: {class: "form-control w-50 mt-2", data: {controller: "datepicker"}}, placeholder: "01/07/2023" %>
+              input_html: {class: "form-control w-50 mt-2", data: {controller: "datepicker"}}, placeholder: "01.07.2023" %>
     <%= f.input :end_date,
               as: :string,
-              input_html: {class: "form-control w-50 mt-2", data: {controller: "datepicker"}}, placeholder: "05/07/2023" %>
+              input_html: {class: "form-control w-50 mt-2", data: {controller: "datepicker"}}, placeholder: "05.07.2023" %>
 
     <%= f.input :categories, as: :check_boxes, label: 'Categories' ' (Please select at least 4)',
               label_html: {class: 'mt-5'},
