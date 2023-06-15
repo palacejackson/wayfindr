@@ -54,3 +54,9 @@
 .icons:hover{
   opacity: 1;
 }
+
+.alert-info {
+  --bs-alert-bg: #925CFF;
+  --bs-alert-border-color: #925CFF;
+  --bs-alert-color: white;
+}

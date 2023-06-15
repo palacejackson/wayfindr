@@ -12,18 +12,20 @@
       </div>
       <div class="modal-body" id="modal-body-social">
           <%# Whatsapp %>
-          <div class="social-media"><%= link_to "https://api.whatsapp.com/send?text=Check out this trip to #{@trip.destination}. #{trip_url(@trip)}", target: "_blank" do %>
-             <i class="fa-brands fa-whatsapp" style="color: #41cb1a" id="icon"></i>
+
+          <div class="social-media"><%= link_to "https://api.whatsapp.com/send?text=Check out this trip to #{@trip.destination}. #{request.original_url}", target: "_blank" do %>
+             <i class="fa-brands fa-whatsapp fa-lg" style="color: #41cb1a; font-size: 56px; margin-top: 19px;" id="icon"></i>
           <% end %>
           </div>
           <%# Twitter %>
-          <div class="social-media"><%=  link_to "https://twitter.com/intent/tweet?text=Check out this trip to #{@trip.destination}.&url=#{trip_url(@trip)}", target: "_blank" do %>
-            <i class="fa-brands fa-square-twitter" style="color: #0e63f6;" id="icon"></i>
+          <div class="social-media"><%=  link_to "https://twitter.com/intent/tweet?text=Check out this trip to #{@trip.destination}.&url=#{request.original_url}", target: "_blank" do %>
+            <i class="fa-brands fa-square-twitter fa-lg" style="color: #0e63f6; margin-top: 21px; font-size: 51px;" id="icon"></i>
           <% end %>
           </div>
           <%# Facebook%>
-          <div class="social-media"><%= link_to "http://www.facebook.com/sharer.php?href=#{trip_url(@trip)}", title: "Check out this trip to #{@trip.destination}", target: "_blank" do %>
-            <i class="fa-brands fa-facebook" style="color: #266de8" id="icon"></i>
+          <div class="social-media"><%= link_to "http://www.facebook.com/sharer.php?href=#{request.original_url}", title: "Check out this trip to #{@trip.destination}", target: "_blank" do %>
+            <i class="fa-brands fa-facebook" style="color: #266de8; font-size: 51px; margin-top: -3px;" id="icon"></i>
+
           <% end %>
           </div>
       </div>
