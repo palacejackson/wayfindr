@@ -5,12 +5,12 @@
 <!-- Modal -->
 <div class="modal fade" id="Modal-social-media" tabindex="-1" aria-labelledby="modaltitle" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content" id="modal-content-social">
+      <div class="modal-header" id="modal-header-social">
         <h1 class="modal-title fs-5" id="modaltitle">Share your trip!</h1>
         <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="modal-body-social">
           <%# Whatsapp %>
           <div class="social-media"><%= link_to "https://api.whatsapp.com/send?text=Check out this trip to #{@trip.destination}. #{trip_url(@trip)}", target: "_blank" do %>
              <i class="fa-brands fa-whatsapp" style="color: #41cb1a" id="icon"></i>
@@ -27,7 +27,7 @@
           <% end %>
           </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" id="modal-footer-social">
         <button type="button" class="btn btn-purple" data-bs-dismiss="modal">Close</button>
         <%# <button type="button" class="btn btn-primary">Save changes</button> %>
       </div>

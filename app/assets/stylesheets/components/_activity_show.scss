@@ -1,6 +1,9 @@
 #large-carousel {
   min-height: 350px;
   max-height: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   img {
     width: 100%;

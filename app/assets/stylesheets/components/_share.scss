@@ -3,23 +3,28 @@
 // }
 
 
-.modal-body {
+#modal-body-social {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
+
+  .social-media {
+    color: white;
+  }
 }
 
-.modal-header {
+#modal-header-social {
   display: flex;
   justify-content: center;
   background-color: rgba(173, 175, 172, 0.2);
 }
-.modal-content {
+
+#modal-content-social {
   background-color: $custom-white;
 }
 
-.modal-footer {
+#modal-footer-social {
   background-color: rgba(173, 175, 172, 0.2);
 }
 
@@ -27,11 +32,6 @@
   font-size: 50px;
 }
 
-.modal-body {
- .social-media {
-  color: white;
-}
-}
 
 #modaltitle {
   color: $custom-black !important;
