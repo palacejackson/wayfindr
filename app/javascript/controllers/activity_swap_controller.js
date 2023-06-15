@@ -6,7 +6,6 @@ export default class extends Controller {
 
   connect() {
     console.log("connected")
-    window.scrollTo(0, 100)
   }
 
   swap(e) {

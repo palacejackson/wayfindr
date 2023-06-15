@@ -25,6 +25,12 @@
     justify-content: center;
     position: relative;
     top: 20px;
+
+    .purple-text {
+      color: $purple;
+      font-style: bold;
+    }
+
   }
 
   .info-header {
@@ -38,6 +44,7 @@
   #rotate-landing {
     color: $custom-black;
   }
+
 }
 
 
