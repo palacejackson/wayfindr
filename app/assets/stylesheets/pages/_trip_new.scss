@@ -34,6 +34,7 @@
 .main-new-container {
   display: flex;
   flex-direction: row;
+
 }
 
 .main-content {
@@ -54,15 +55,19 @@
   }
 }
 
-
 .form-img-container {
   width: 40%;
 }
 
 #user-profile-new-trip {
+  background-color: $custom-white;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+#user-profile-new-trip-img {
   display: flex;
   align-content: center;
-  margin: 10px;
 }
 
 .form-img{
