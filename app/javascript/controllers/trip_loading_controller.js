@@ -15,7 +15,7 @@ export default class extends Controller {
       this.formTarget.classList.add('away')
       this.generatingTarget.classList.remove('away')
       // hide modal/form
-          // show loading modal with spinny animation finishing after 4 seconds
+      // show loading modal with spinny animation finishing after 4 seconds
       // then we leave the page automatically because form gets submitted
       setTimeout(() => {
         event.target.form.submit()

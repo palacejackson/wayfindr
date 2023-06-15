@@ -1,15 +1,18 @@
   <%= simple_form_for(@trip) do |f|%>
         <%# <h1 class=" modal-title fs-5 " id="modalToggleLabel">Create your trip</h1> %>
       <div class="form-header">
-        <h3 class="py-3 trip-form-header">Create your trip</h3>
+        <h3 class="py-3 trip-form-header">Plan your trip</h3>
         <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
       </div>
       <div class="modal-body" data-controller="purple-checkbox">
       <%= f.label :destination %>
       <%=f.text_field :destination, style: 'text-transform: capitalize;', class:"form-control w-75 mt-2", data: { landing_page_target: :destination }, placeholder: "Rome" %>
     <%# <%= f.input :destination %><br>
-    <%= f.label :number_of_guests %>
-    <%= f.input :number_of_guests, input_html: {class: "form-control mt-2 w-25"},class:"form-control", label: false, prompt: "0", collection: [1,2,3,4,5,'6+'] %>
+    <div class="guests">
+      <%= f.label :number_of_guests %>
+      <%= f.input :number_of_guests, input_html: {class: "form-control mt-2 w-25"},class:"form-control", label: false, prompt: "0", collection: [1,2,3,4,5,'6+'] %>
+    </div>
+
     <div class="row">
       <div class="col-md-6">
         <%= f.input :start_date,
@@ -23,7 +26,7 @@
       </div>
     </div>
 
-    <%= f.input :categories, as: :check_boxes, label: 'Categories' ' (Please select at least 4)',
+    <%= f.input :categories, as: :check_boxes, label: 'What interests you?' ' (Please select at least 4)',
               label_html: {class: 'mt-5'},
               input_html: {class: 'inline-checkboxes', data: { purple_checkbox_target: "checkboxes", action: "change->purple-checkbox#fire" }},
               item_wrapper_class: 'checkbox-item',
@@ -31,16 +34,16 @@
 
       </div>
 
-      <div class="modal-footer">
-        <%= f.submit "Generate itinerary", data: {action: 'click->trip-loading#submit'}, class: "btn btn-purple m-3" %>
+      <div class="modal-footer justify-content-center">
+        <%= f.submit "Generate itinerary", data: {action: 'click->trip-loading#submit'}, class: "btn btn-purple m-3 w-50" %>
 
         <%# <button id="generateBtn" class="btn-purple d-none" data-bs-target="#selectActivitiesModal" data-bs-toggle="modal">Create my itinerary</button> %>
 
-        <div id="alertContainer">
+        <%# <div id="alertContainer">
           <div class="alert alert-light d-none" role="alert">
           Generating itinerary...
           </div>
-        </div>
+        </div> %>
 
       </div>
   <% end  %>
