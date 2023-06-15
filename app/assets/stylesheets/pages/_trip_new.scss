@@ -27,22 +27,8 @@
 
 .trip-form-header{
   text-align: center;
-  margin-bottom: -20px;
+  color: rgba(41, 42, 40, 0.7);
 }
-
-
-
-// .trip-end{
-//   margin-left: -50px;
-//   // or
-//   // margin-left: -20px;
-// }
-
-// .guests{
-//   margin-left: -50px;
-//   // or
-//   // margin-left: -20px;
-// }
 
 
 .main-new-container {
@@ -71,7 +57,12 @@
 
 .form-img-container {
   width: 40%;
+}
 
+#user-profile-new-trip {
+  display: flex;
+  align-content: center;
+  margin: 10px;
 }
 
 .form-img{
