@@ -3,15 +3,18 @@
 
   <%= simple_form_for(@trip) do |f|%>
         <%# <h1 class=" modal-title fs-5 " id="modalToggleLabel">Create your trip</h1> %>
-    <div class="row main">
-      <div class="col main-content">
-        <div class="form-header">
-        <h3 class="py-3 trip-form-header">Plan your trip</h3>
-            <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
-        </div>
-        <div class="modal-body form-body" data-controller="purple-checkbox">
+    <div class="main-new-container">
 
-          <div class="row">
+      <div class="main-content">
+
+        <div class="form-header">
+          <h3 class="py-3 trip-form-header">Plan your trip</h3>
+              <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
+          </div>
+
+        <div class="modal-body" id="form-body" data-controller="purple-checkbox">
+
+          <div class="row inner-new-container">
             <div class="col-md-6">
               <%= f.label :destination %>
               <%=f.text_field :destination, style: 'text-transform: capitalize;', class:"form-control w-100 mt-2", data: { landing_page_target: :destination }, placeholder: "Rome" %>
@@ -27,7 +30,7 @@
           </div>
 
 
-          <div class="row">
+          <div class="row inner-new-container">
             <div class="col-md-6">
               <%= f.input :start_date,
                           as: :string,
@@ -40,7 +43,7 @@
             </div>
           </div>
 
-          <div class="categories-form d-flex justify-content-center">
+          <div class="categories-form d-flex justify-content-center inner-new-container">
             <%= f.input :categories, as: :check_boxes, label: 'What interests you?' ' (Please select at least 4)',
                       label_html: {class: 'mt-5'},
                       input_html: {class: 'inline-checkboxes', data: { purple_checkbox_target: "checkboxes", action: "change->purple-checkbox#fire" }},
@@ -50,17 +53,16 @@
 
         </div>
 
-        <div class="modal-footer justify-content-center">
-          <%= f.submit "Generate itinerary", data: {action: 'click->trip-loading#submit'}, class: "btn btn-purple m-3 w-50 generatebtn" %>
+        <div class="modal-footer d-flex justify-content-center flex-column">
+          <%= f.submit "Generate itinerary", data: {action: 'click->trip-loading#submit'}, class: "btn btn-purple w-50 generatebtn" %>
+          <img class="form-logo" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/822/original/wayfindr2.png?1686224351" alt="wayfindr-logo">
         </div>
 
-        <img class="form-logo" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/822/original/wayfindr2.png?1686224351" alt="wayfindr-logo">
       </div>
 
 
-      <div class="col">
+      <div class="form-img-container">
         <img class="form-img" src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="background-img">
-
       </div>
 
 
