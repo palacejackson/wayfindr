@@ -2,20 +2,38 @@
 //   z-index: -10 !important;
 // }
 
-.fa-share {
-  background: none;
-  border: none;
-  color: white;
+
+.modal-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(173, 175, 172, 0.2);
+}
+.modal-content {
+  background-color: $custom-white;
+}
+
+.modal-footer {
+  background-color: rgba(173, 175, 172, 0.2);
+}
+
+.fa-brands {
+  font-size: 50px;
 }
 
 .modal-body {
-
  .social-media {
   color: white;
 }
 }
 
 #modaltitle {
-  color: $purple;
-  font-weight: bold;
+  color: $custom-black !important;
+  opacity: 0.7;
 }
