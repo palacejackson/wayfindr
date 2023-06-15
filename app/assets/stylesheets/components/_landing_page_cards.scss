@@ -11,12 +11,13 @@
 .card-info {
   // background-size: cover;
   // background-position: center;
+  background-color: white;
   text-align: center;
   height: 250px;
   color: $custom-black;
   font-size: 18px;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 2px 2px 6px;
 
   .inner-card-info {
     display: flex;
@@ -24,6 +25,12 @@
     justify-content: center;
     position: relative;
     top: 20px;
+
+    .purple-text {
+      color: $purple;
+      font-style: bold;
+    }
+
   }
 
   .info-header {
@@ -37,6 +44,7 @@
   #rotate-landing {
     color: $custom-black;
   }
+
 }
 
 

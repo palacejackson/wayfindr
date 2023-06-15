@@ -1,17 +1,18 @@
 <!-- Button trigger modal -->
-<button type="button" class="fa-solid fa-share align-self-right me-2" data-bs-toggle="modal" data-bs-target="#Modal-social-media">
-</button>
+<%# <button type="button" class="fa-solid fa-share align-self-right me-2" data-bs-toggle="modal" data-bs-target="#Modal-social-media">
+</button> %>
 
 <!-- Modal -->
 <div class="modal fade" id="Modal-social-media" tabindex="-1" aria-labelledby="modaltitle" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modaltitle" style="margin-left: 161px;">Share your trip!</h1>
+    <div class="modal-content" id="modal-content-social">
+      <div class="modal-header" id="modal-header-social">
+        <h1 class="modal-title fs-5" id="modaltitle">Share your trip!</h1>
         <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
       </div>
-      <div class="modal-body d-flex" style="justify-content: space-between; margin-left: 42px; margin-right: 42px; padding: 29px;">
+      <div class="modal-body" id="modal-body-social">
           <%# Whatsapp %>
+
           <div class="social-media"><%= link_to "https://api.whatsapp.com/send?text=Check out this trip to #{@trip.destination}. #{request.original_url}", target: "_blank" do %>
              <i class="fa-brands fa-whatsapp fa-lg" style="color: #41cb1a; font-size: 56px; margin-top: 19px;" id="icon"></i>
           <% end %>
@@ -24,10 +25,11 @@
           <%# Facebook%>
           <div class="social-media"><%= link_to "http://www.facebook.com/sharer.php?href=#{request.original_url}", title: "Check out this trip to #{@trip.destination}", target: "_blank" do %>
             <i class="fa-brands fa-facebook" style="color: #266de8; font-size: 51px; margin-top: -3px;" id="icon"></i>
+
           <% end %>
           </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" id="modal-footer-social">
         <button type="button" class="btn btn-purple" data-bs-dismiss="modal">Close</button>
         <%# <button type="button" class="btn btn-primary">Save changes</button> %>
       </div>

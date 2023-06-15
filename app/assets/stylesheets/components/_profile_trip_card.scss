@@ -10,7 +10,13 @@
   width: 100%;
   background-color: white;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 2px 2px 6px;
+
+  h3 {
+    color: $custom-black !important;
+    opacity: 0.7;
+  }
+
 }
 
 .see-all-trips {
@@ -33,14 +39,6 @@
   flex-wrap: wrap;
 }
 
-
-#new.trip-card {
-  background-color: rgba(146, 92, 255, 0.2);
-   p {
-    color: $custom-black;
-    line-height: 1.2;
-   }
-}
 
 .trip-card {
   width: 300px;

@@ -1,21 +1,26 @@
-<h2 style="font-weight: bold;"><%= activity.name %></h2>
-<p><%= activity.address %></p>
-<% case activity.activity_type %>
-  <% when "Museums" %>
-    <div><i class="fa-solid fa-landmark activity-icon"></i></div>
-  <% when "Parks" %>
-    <div><i class="fa-solid fa-tree activity-icon"></i></div>
-  <% when "Sights" %>
-    <div><i class="fa-solid fa-binoculars activity-icon"></i></div>
-  <% when "Restaurants" %>
-    <div><i class="fa-solid fa-utensils activity-icon"></i></div>
-  <% when "walking+tours" %>
-    <div><i class="fa-solid fa-person-walking activity-icon"></i></div>
-    <%# ADD EXTRA CATEGORIES HERE %>
-  <% when "Bars" %>
-    <div><i class="fa-solid fa-martini-glass activity-icon"></i></div>
-  <% when "Cafes" %>
-    <div><i class="fa-solid fa-mug-hot activity-icon"></i></div>
-  <% when "Markets" %>
-    <div><i class="fa-solid fa-store activity-icon"></i></div>
-<% end %>
+
+<div id="map-activity-name">
+  <p class="pt-2" style="font-size: 24px"><%= activity.name %></p>
+</div>
+<div id="map-address-and-icon">
+  <p style="font-size: 16px"><%= activity.address %></p>
+  <% case activity.activity_type %>
+    <% when "Museums" %>
+      <div><i class="fa-solid fa-landmark activity-icon"></i></div>
+    <% when "Parks" %>
+      <div><i class="fa-solid fa-tree activity-icon"></i></div>
+    <% when "Sights" %>
+      <div><i class="fa-solid fa-binoculars activity-icon"></i></div>
+    <% when "Restaurants" %>
+      <div><i class="fa-solid fa-utensils activity-icon"></i></div>
+    <% when "walking+tours" %>
+      <div><i class="fa-solid fa-person-walking activity-icon"></i></div>
+      <%# ADD EXTRA CATEGORIES HERE %>
+    <% when "Bars" %>
+      <div><i class="fa-solid fa-martini-glass activity-icon"></i></div>
+    <% when "Cafes" %>
+      <div><i class="fa-solid fa-mug-hot activity-icon"></i></div>
+    <% when "Markets" %>
+      <div><i class="fa-solid fa-store activity-icon"></i></div>
+  <% end %>
+</div>

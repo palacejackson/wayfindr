@@ -18,11 +18,15 @@
       .hello-username {
         display: flex;
         flex-direction: row;
+        color: $custom-black !important;
+        opacity: 0.7;
       }
     }
 
     h1 {
       font-size: 48px;
+      color: $custom-black !important;
+      opacity: 0.7;
     }
 
     p {

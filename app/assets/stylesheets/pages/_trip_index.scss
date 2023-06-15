@@ -14,12 +14,17 @@
 }
 
 #share-icon i {
-  cursor: pointer;
+  transition: all .2s ease-in-out;
   color: $custom-black;
   opacity: 0.7;
   font-size: 40px;
   // display: flex;
   // align-items: center;
+}
+
+#share-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 #icon:hover {

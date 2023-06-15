@@ -1,5 +1,5 @@
 #nav-home-tab{
-  color: black;
+  color: $custom-black;
   background: $custom-white;
 }
 
@@ -13,7 +13,7 @@
 
 .nav-link-tab:not(.active){
   background-color: #e0e0e0 !important;
-  color: black !important;
+  color: $custom-black !important;
   opacity: 0.7;
 }
 
@@ -22,7 +22,7 @@
 } */
 
 #nav-profile-tab{
-  color: black;
+  color: $custom-black;
   background: $custom-white;
 }
 
@@ -31,7 +31,7 @@
 } */
 
 #nav-contact-tab{
-  color: black;
+  color: $custom-black;
   background: $custom-white;
 }
 
@@ -41,7 +41,7 @@
 } */
 
 #nav-last-tab{
-  color:black;
+  color:$custom-black;
   background: white;
 }
 
