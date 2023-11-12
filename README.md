@@ -25,7 +25,7 @@ Wayfindr is a European Trip Itinerary Generator designed for users who book shor
 
 ### Usage
 1. Sign up and create a user profile.
-2. Input destination, length of stay, and select at least four preferred activity types. NOTE: This prototype version only works for London, Paris, and Rome due to time and budget constraints during development.
+2. Input destination, length of stay, and select at least four preferred activity types. **NOTE: This prototype version only works for London, Paris, and Rome due to time and budget constraints during development**.
 3. An itinerary will be generated with three activities for each day.
 4. Utilise the feature to swap out activities that don't take your fancy.
 5. View all future and past trps from your user profile page.
