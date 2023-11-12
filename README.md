@@ -1,5 +1,5 @@
 
-# wayfindr.co.uk - European Trip Itinerary Generator
+# wayfindr.co.uk - Find your way to the perfect trip
 
 Rails app designed and developed over a 2 week sprint in a team of four as part of the final project of Le Wagon Bootcamp. Generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
 
