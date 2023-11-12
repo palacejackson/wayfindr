@@ -24,8 +24,13 @@ Wayfindr is a European Trip Itinerary Generator designed for users who book shor
 4. Set up Mapbox API key.
 
 ### Usage
+
+**NOTE:**
+ - **The application is currently optimized for laptop use and is not yet responsive for mobile devices. Please use a laptop for the best user experience.**
+ - **This prototype version only works for London, Paris, and Rome due to time and budget constraints during development.**
+
 1. Sign up and create a user profile.
-2. Input destination, length of stay, and select at least four preferred activity types. **NOTE: This prototype version only works for London, Paris, and Rome due to time and budget constraints during development**.
+2. Input destination (London, Paris or Rome), length of stay, and select at least four preferred activity types.
 3. An itinerary will be generated with three activities for each day.
 4. Utilise the feature to swap out activities that don't take your fancy.
 5. View all future and past trps from your user profile page.
@@ -42,7 +47,7 @@ Wayfindr is a European Trip Itinerary Generator designed for users who book shor
 On the itinerary page, a map displays the locations of selected activities. Hovering over icons provides detailed information about each activity.
 
 ## Swap Feature
-On the itinerary page, you can swap out an activity by clicking the swap icon. This will rendomly generate a new acitivity in it's place.
+On the itinerary page, you can swap out an activity by clicking the swap icon. This will randomly generate a new activity in it's place.
 
 ## Project Motivation
 This project was conceived with the belief that trip planning should be enjoyable, not stressful.
