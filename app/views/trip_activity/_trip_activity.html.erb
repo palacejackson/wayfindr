@@ -1,7 +1,8 @@
  <div class="card mt-4" style="width: 18rem;" data-activity-swap-target="activityCard" data-id="<%= activity.id %>">
+ <% @carousel = 0 %>
 
     <%# ACTIVITY PHOTOS %>
-    <%= render '/trip_activity/activity_carousel', activity: activity %>
+    <%= render '/trip_activity/activity_carousel', activity: activity, carousel: @carousel%>
 
     <div class="header-container p-3" data-controller="activity-swap">
 
