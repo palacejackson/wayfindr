@@ -1,57 +1,57 @@
-<div class="card mt-4" style="width: 18rem;" data-activity-swap-target="activityCard" data-id="<%= activity.id %>">
+ <div class="card mt-4" style="width: 18rem;" data-activity-swap-target="activityCard" data-id="<%= activity.id %>">
 
-  <%# ACTIVITY PHOTOS %>
-  <%= render '/trip_activity/activity_carousel', activity: activity %>
+    <%# ACTIVITY PHOTOS %>
+    <%= render '/trip_activity/activity_carousel', activity: activity %>
 
-  <div class="header-container p-3">
+    <div class="header-container p-3" data-controller="activity-swap">
 
-    <%# ACTIVITY TITLE %>
-    <div class="activity-title">
-      <%= activity.name %>
-    </div>
-
-    <%# ACTIVITY DETAILS %>
-    <div class="activity-details-index">
-      <p class="mt-2"><%= activity.details %></p>
-    </div>
-
-
-
-      <%# ACTIVITY ICONS %>
-    <div class="activity-icons-container">
-      <%= render '/trip_activity/activity_type_case', activity: activity %>
-      <%= render '/trip_activity/daytime', activity: activity %>
-    </div>
-
-    <%# MORE INFO AND SWAP %>
-
-    <div class="button-and-swap my-2">
-      <div class="d-none">
-        <%= simple_form_for TripActivity.find_by(activity: activity, trip: @trip, locked: true), html: {data: {activity_swap_target: "form", id: activity.id}} do |f| %>
-          <%= f.input :locked %>
-          <%= f.submit %>
-        <% end %>
+      <%# ACTIVITY TITLE %>
+      <div class="activity-title">
+        <%= activity.name %>
       </div>
 
-      <%# MODAL BUTTON HERE %>
-      <button type="button" class="btn btn-purple more-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%= activity.id%>">
-        More info
-      </button>
-
-      <div class="swap-feature">
-        <i  class="fa-solid fa-rotate" id="rotate-trip"
-            data-activity-swap-target="swapButton"
-            data-action="click->activity-swap#swap"
-            data-id="<%= activity.id %>">
-        </i>
+      <%# ACTIVITY DETAILS %>
+      <div class="activity-details-index">
+        <p class="mt-2"><%= activity.details %></p>
       </div>
-        <%# <i class="fa-regular fa-bookmark card-bookmark"></i> %>
+
+
+
+        <%# ACTIVITY ICONS %>
+      <div class="activity-icons-container">
+        <%= render '/trip_activity/activity_type_case', activity: activity %>
+        <%= render '/trip_activity/daytime', activity: activity %>
+      </div>
+
+      <%# MORE INFO AND SWAP %>
+
+      <div class="button-and-swap my-2">
+        <div class="d-none">
+          <%= simple_form_for TripActivity.find_by(activity: activity, trip: @trip, locked: true), html: {data: {activity_swap_target: "form", id: activity.id}} do |f| %>
+            <%= f.input :locked %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+
+        <%# MODAL BUTTON HERE %>
+        <button type="button" class="btn btn-purple more-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%= activity.id%>">
+          More info
+        </button>
+
+        <div class="swap-feature">
+          <i  class="fa-solid fa-rotate" id="rotate-trip"
+              data-activity-swap-target="swapButton"
+              data-action="click->activity-swap#swap"
+              data-id="<%= activity.id %>">
+          </i>
+        </div>
+          <%# <i class="fa-regular fa-bookmark card-bookmark"></i> %>
+
+      </div>
+      <%# MODAL ENDS ABOVE %>
 
     </div>
-    <%# MODAL ENDS ABOVE %>
-
   </div>
-</div>
 
 
-<%= render 'activities/activity_show', activity: activity %>
+  <%= render 'activities/activity_show', activity: activity %>
