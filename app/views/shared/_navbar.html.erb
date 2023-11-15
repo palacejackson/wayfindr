@@ -1,4 +1,4 @@
-<div  class="nav navbar <%= @fixed ? 'fixed-top' : 'static-top' %>  navbar-expand-sm navbar-lewagon p-md-3 <%= @transparent ? 'transparent' : 'solid' %>"
+<div  class="nav navbar <%= @fixed ? 'fixed-top' : 'static-top' %>  navbar-expand-lg navbar-lewagon p-md-3 <%= @transparent ? 'transparent' : 'solid' %>"
       data-action="scroll@window->navbar#scroll"
       data-controller="navbar">
 
@@ -14,13 +14,12 @@
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span><i class="fa-solid fa-bars pt-2 " style="color: #f5f5f5;"></i></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-
           <li class="nav-item">
             <a href="/user/show" class="nav-link"><p id="hello" style="display:inline">Hello</p> <%= current_user.username %></a>
           </li>
@@ -34,11 +33,13 @@
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
+
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
+
       </ul>
     </div>
   </div>

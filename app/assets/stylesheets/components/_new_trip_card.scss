@@ -1,27 +1,28 @@
-#new {
+#new.trip-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
-
-  p {
-    transition: 0.3s
-  }
+  transition: all .2s ease-in-out;
+  background-color: rgba(146, 92, 255, 0.2);
 }
-
 
 #new-trip {
   color: $purple !important;
   text-align: center;
   font-size: 24px;
-  transition: 0.3s;
+  transition: all .2s ease-in-out;
   font-weight: bold;
+  border: 2px solid $purple;
+  border-radius: 6px;
 }
 
 
-#new:hover {
+#new.trip-card:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
 
-  p {
+  #new-trip {
   font-size: 38px;
   }
+
 }

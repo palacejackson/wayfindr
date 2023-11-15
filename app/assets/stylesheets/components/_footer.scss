@@ -1,5 +1,6 @@
 .fixed-footer {
   // background: #F4F4F4;
+  width: 100%;
   background-color: white;
   display: flex;
   align-items: center;
@@ -25,7 +26,7 @@
 
 .footer-links a {
   color: $purple;
-  opacity: 0.15;
+  opacity: 0.4;
   text-decoration: none;
   font-size: 35px;
   padding: 0px 10px;

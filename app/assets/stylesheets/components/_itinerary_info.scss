@@ -5,18 +5,64 @@
     // display: block;
     // margin: 0 auto;
     font-size: 24px;
-    margin: 8px;
-    padding: 45px;
+    margin: 18px;
+    padding-left: 45px;
+    padding-right: 45px;
     padding-bottom: 83px;
+    text-align: center;
 }
 
+.activity-key-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  text-align: center center;
+
+}
+
+.activity-key-card {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 2px 2px 6px;
+  max-height: 110px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+    .key-text {
+      padding: 4px;
+    }
+}
+
+.day-night-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 15px;
+}
+
+.activity-key-day-night {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 2px 2px 6px;
+  max-height: 110px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .key{
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .key-text{
-  font-size: 11px;
+  font-size: 16px;
   color: #4b4c4aeb;
+  margin-bottom: 0px !important;
 }
 
 // .activity-key-row{

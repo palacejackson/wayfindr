@@ -1,16 +1,138 @@
 
 .new-trip-container {
   position: relative;
-  margin: auto;
+  top: 2%;
   background: $white;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
-  width: 30%;
+  width: 65%;
   padding: 15px;
+  opacity: 1;
+  transition: all .3s ease;
+  &.away {
+    transform: translate(-220%, -50%);
+    opacity: 0;
+  }
+}
+
+.main-content{
+  margin-top: 30px;
 }
 
 
 .banner-image-new-trip {
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("new_trip.jpg");
   background-size: cover;
+}
+
+.trip-form-header{
+  text-align: center;
+  color: rgba(41, 42, 40, 0.7);
+}
+
+
+.main-new-container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.main-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 0px !important;
+
+  #form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex: 0 !important;
+    // or 30
+  }
+}
+
+.form-img-container {
+  width: 40%;
+}
+
+#user-profile-new-trip {
+  background-color: $custom-white;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+#user-profile-new-trip-img {
+  display: flex;
+  align-content: center;
+}
+
+.form-img{
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.9;
+  object-fit: cover;
+
+}
+
+.form-logo{
+    width: 15%;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+
+.generating-container {
+  width: 60%;
+  height: 200px;
+  background: $white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+  padding: 15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  transition: all .3s ease;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .spinny {
+    animation-name: spinny-logo;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  }
+  &.away {
+    transform: translate(220%, -50%);
+    opacity: 0;
+    .spinny {
+      animation-play-state: paused;
+    }
+  }
+
+}
+
+@keyframes spinny-logo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

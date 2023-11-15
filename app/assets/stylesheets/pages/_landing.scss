@@ -1,10 +1,4 @@
 // Specific CSS for your home-page
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
 
 .banner-image {
   background-image: linear-gradient(rgba(185, 184, 184, 0.3),rgba(0,0,0,0.2)), url("paris.jpeg");
@@ -32,18 +26,19 @@ body {
   color: rgb(250, 251, 250);
   font-size: 80px;
   position: absolute;
-  top: 85%;
-  left: 47.5%;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: all .2s ease-in-out;
 
 }
 
 #down-arrow:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  font-size: 85px;
 }
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   #head {
     font-size: 50px;
   }
@@ -51,4 +46,38 @@ body {
   #body {
     font-size: 20px;
   }
+
+  #down-arrow {
+    font-size: 70px;
+    position: absolute;
+    transition: all .2s ease-in-out;
+  }
+
+  #down-arrow:hover {
+    font-size: 75px;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  #head {
+    font-size: 40px;
+  }
+
+  #body {
+    font-size: 16px;
+  }
+
+  #down-arrow {
+    font-size: 60px;
+    top: 90%;
+    position: absolute;
+    transition: all .2s ease-in-out;
+  }
+
+  #down-arrow:hover {
+    font-size: 65px;
+  }
+
 }

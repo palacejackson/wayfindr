@@ -20,6 +20,42 @@
   padding-left: 10px;
 }
 
+.fa-solid.fa-bars {
+  font-size: 30px;
+}
+
+@media (max-width: 768px){
+  #navbar-wayfindr {
+  font-size: 25px;
+  }
+
+  .fa-solid.fa-bars {
+    font-size: 25px;
+  }
+
+  #navbar-logo {
+    img {
+      width: 45px;
+    }
+  }
+}
+
+@media (max-width: 375px){
+  #navbar-wayfindr {
+  font-size: 20px;
+  }
+
+  .fa-solid.fa-bars {
+    font-size: 20px;
+  }
+
+  #navbar-logo {
+    img {
+      width: 40px;
+    }
+  }
+}
+
 #logo-and-wayfindr {
   display: flex;
   align-items: center;
@@ -55,4 +91,9 @@
     #navbar-wayfindr {
       color: $light-gray;
     }
+}
+
+
+.navbar-toggler {
+  border: 1px solid transparent !important;
 }

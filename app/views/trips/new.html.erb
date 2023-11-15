@@ -1,6 +1,15 @@
 <main class="trip-new">
+  <div data-controller='trip-loading'>
   <div  class="landing-info banner-image-new-trip w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
-  <div class="content new-trip-container">
-    <%= render 'trips/new_trip_form', locals: { trip: @trip, categories: @categories} %>
+    <div class="content new-trip-container" data-trip-loading-target='form'>
+      <%= render 'trips/new_trip_form', locals: { trip: @trip, categories: @categories} %>
+    </div>
+
+    <div class="generating-container away" data-trip-loading-target='generating'>
+      <h2>Generating your Trip...</h2>
+      <img src="<%= image_path 'wayfindr2.png' %>" alt="Wayfindr Logo" class='spinny'>
+    </div>
+
+    </div>
   </div>
 </main>
