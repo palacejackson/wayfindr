@@ -32,7 +32,7 @@ export default class extends Controller {
       }
     }).then(html => {
       // html instead of data
-      // we get the activity card that we found earlier and change it to the newly generated activity card with the new html
+      // we get the activity card that we found earlier and change it to the newly generated activity card
       activityCard.outerHTML = html
     });
   }
