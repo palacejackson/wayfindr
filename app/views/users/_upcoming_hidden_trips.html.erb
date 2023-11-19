@@ -17,7 +17,7 @@
 
         <div id="trip-card-info">
           <%= trip.destination %>
-          <%= link_to trip_path(trip), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete your trip to #{@trip.destination}?"} do %>
+          <%= link_to trip_path(trip), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete your trip to #{trip.destination}?"} do %>
             <p class="fa-regular fa-trash-can"></p>
           <% end %>
         </div>

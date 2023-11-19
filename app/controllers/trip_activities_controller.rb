@@ -7,6 +7,7 @@ class TripActivitiesController < ApplicationController
     @trip_activity = TripActivity.find_by(activity_id: id, trip_id: trip_id, locked: true)
     @trip = Trip.find_by_id(trip_id)
     @new_activity = @trip.remaining_activities.sample
+    @new_activity = @trip.remaining_activities.sample if @trip.selected_activities.include? @new_activity
     @trip_activity.update(activity: @new_activity)
     @carousel = 0
     # TODO: put this in an if statement
