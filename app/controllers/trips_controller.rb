@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   def show
-    @trip = Trip.find(params[:id])
+    @trip = Trip.find_by_id(params[:id])
     @trip_activities = @trip.activities_by_day
     @remaining_activities = @trip.remaining_activities
     @trip_activity_ids = TripActivity.where(trip_id: Trip.find(params[:id]), locked: true).pluck(:activity_id)

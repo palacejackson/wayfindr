@@ -1,15 +1,18 @@
 class TripActivitiesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def update
-    @trip_activity = TripActivity.find(params[:id])
-    p @trip_activity
-    p @trip_activity.trip
-    @trip = @trip_activity.trip
+    response = request.body.read
+    trip_id = JSON.parse(response)
+    id = params[:id]
+    @trip_activity = TripActivity.find_by(activity_id: id, trip_id: trip_id, locked: true)
+    @trip = Trip.find_by_id(trip_id)
     @new_activity = @trip.remaining_activities.sample
-    # TODO: put this in an if statement
+    @new_activity = @trip.remaining_activities.sample if @trip.selected_activities.include? @new_activity
     @trip_activity.update(activity: @new_activity)
+    @carousel = 0
+    # TODO: put this in an if statement
     respond_to do |format|
-      format.html { redirect_to trip_path(@trip), notice: "New activity generated!" }
-      format.json
+      format.html { render partial: 'trip_activity/trip_activity', locals: { activity: @new_activity } }
     end
   end
 end
